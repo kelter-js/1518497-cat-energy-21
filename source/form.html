@@ -20,7 +20,7 @@
               <a>главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">каталог продукции</a>
+              <a href="petalog.html">каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a href="form.html">подбор программы</a>
@@ -34,6 +34,127 @@
     <main class="form-main">
 
       <h1 class="visually-hidden">Кэт энерджи — функциональное питание для котов</h1>
+
+      <section class="program-selection">
+
+        <h2 class="program-selection__heading">Подбор программы</h2>
+        <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+
+        <form class="program-selection__form form" method="get" action="https://echo.htmlacademy.ru">
+
+          <fieldset class="form__pet-info">
+            <ul class="form__pet-info-list">
+
+              <li class="form__pet-info-item">
+                <label class="form__label" for="pet-name">имя:*</label>
+                <input class="form__input" type="text" id="pet-name" name="name" placeholder="барсик" required>
+              </li>
+
+              <li class="form__pet-info-item">
+                <label class="form__label" for="pet-weight">вес (кг):*</label>
+                <input class="form__input" type="number" id="pet-weight" name="weight" placeholder="7" required>
+              </li>
+
+              <li class="form__pet-info-item">
+                <label class="form__label" for="pet-age">возраст (лет):</label>
+                <input class="form__input" type="number" id="pet-age" name="age" placeholder="7">
+              </li>
+
+            </ul>
+
+            <ul class="form__program-selection-list">
+
+              <li class="form__program-selection-item">
+                <input class="form__radio-button" type="radio" value="weight-loss" name="program-type" id="feed-weight-lost" checked>
+                <label class="form__radio-label" for="feed-weight-lost">похудение</label>
+              </li>
+
+              <li class="form__program-selection-item">
+                <input class="form__radio-button" type="radio" value="gather-mass" name="program-type" id="feed-gather-mass">
+                <label class="form__radio-label" for="feed-gather-mass">набор массы</label>
+              </li>
+
+              <li class="form__program-selection-item">
+                <input class="form__radio-button" type="radio" value="suggest-program" name="program-type" id="user-cant-decide">
+                <label class="form__radio-label" for="user-cant-decide">не знаю (нужен ваш совет)</label>
+              </li>
+
+            </ul>
+
+          </fieldset>
+
+          <fieldset class="form__owner-contacts">
+
+            <legend class="form__heading">Контактные данные (владельца кота)</legend>
+
+            <ul class="form__owner-contacts-list">
+
+              <li class="form__owner-contacts-item">
+                <label class="form__label" for="user-email">e-mail:*</label>
+                <input class="form__input" type="email" id="user-email" name="email" placeholder="kuklachev@gmail.com" required>
+              </li>
+
+              <li class="form__owner-contacts-item">
+                <label class="form__label" for="user-phone">телефон:*</label>
+                <input class="form__input" type="tel" id="user-phone" name="phone" placeholder="8 (960) 900-60-90" required>
+              </li>
+
+            </ul>
+          </fieldset>
+
+          <label class="form__heading" for="user-commentary">Комментарий</label>
+          <textarea class="form__user-commentary" id="user-commentary" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+
+          <fieldset class="form__additional">
+
+            <legend class="form__heading">Дополнительно</legend>
+
+            <ul class="form__additonal-list">
+
+              <li class="form__additonal-item">
+                <input class="form__checkbox" type="checkbox" name="sweetener" id="additional-sweetener" checked>
+                <label class="form__label" for="additional-sweetener">сахарозаменитель</label>
+              </li>
+
+              <li class="form__additonal-item">
+                <input class="form__checkbox" type="checkbox" name="water" id="additional-water">
+                <label class="form__label" for="additional-water">питьевая вода</label>
+              </li>
+
+              <li class="form__additonal-item">
+                <input class="form__checkbox" type="checkbox" name="milk" id="additional-milk">
+                <label class="form__label" for="additional-milk">молоко</label>
+              </li>
+
+              <li class="form__additonal-item">
+                <input class="form__checkbox" type="checkbox" name="vitamins" id="additional-vitamins">
+                <label class="form__label" for="additional-vitamins">витамины</label>
+              </li>
+
+            </ul>
+
+          </fieldset>
+
+          <button class="form__button button" type="submit">отправить заявку</button>
+
+        </form>
+
+        <p class="program-selection__footnote">* — Обязательные поля</p>
+
+      </section>
+
+      <section class="dealers">
+
+        <div class="dealers__wrapper">
+          <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
+          <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+
+        <div class="dealers__map-wrapper">
+          <img src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
+        </div>
+
+      </section>
 
     </main>
 
