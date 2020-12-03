@@ -1,0 +1,54 @@
+.ffbasic(@weight : normal, @style : normal) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: @weight;
+  font-style: @style;
+};
+
+.ffbasicmedium(@weight : normal, @style : normal) {
+  font-family: "OswaldMedium", "Arial", sans-serif;
+  font-weight: @weight;
+  font-style: @style;
+};
+
+.fffontarial() {
+  font-family: "Arial", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.fstyle(@font-size, @line-height, @color, @transform : none) {
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+  text-transform: @transform;
+}
+
+.button {
+  padding: 9px 73px;
+  background-color: @light-green-color;
+}
+
+.container {
+  padding: 0px 20px;
+}
+
+.list-style-disabler() {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.link-style-reset() {
+  text-decoration: none;
+}

@@ -1,0 +1,52 @@
+.promo__slogan-wrapper {
+  position: relative;
+  width: 320px;
+  height: 275px;
+  padding-top: 27px;
+  text-align: center;
+  background: rgba(@light-green-color, 65%);
+    &::after {
+      content: '';
+      position: absolute;
+      top: 167px;
+      left: 20px;
+      display: block;
+      width: 280px;
+      height: 270px;
+      background-color: transparent;
+      background-image: url("/img/mobile-index-food-can.png");
+    }
+}
+
+.promo__slogan-background {
+  background: url("/img/background-cat-desktop.jpg") no-repeat;
+  width: 320px;
+  height: 302px;
+  margin-bottom: 138px;
+}
+
+.promo {
+  width: 320px;
+  margin-bottom: 22px;
+}
+
+.promo__slogan {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 25px;
+  .ffbasic();
+  .fstyle(36px, 36px, @white-color);
+}
+
+.promo__intro {
+  margin: 0px;
+  padding: 0px;
+  .ffbasic();
+  .fstyle(14px, 14px, @white-color, uppercase);
+}
+
+.promo__button {
+  .link-style-reset();
+  .ffbasic();
+  .fstyle(14px, 18px, @white-color, uppercase);
+}
