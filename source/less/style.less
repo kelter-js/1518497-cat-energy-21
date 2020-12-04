@@ -1,17 +1,43 @@
 @import "variables.less";
 @import "mixin.less";
+@import "fonts.less";
+@import "blocks/page-header.less";
+@import "blocks/main-nav.less";
 
-@import url("page-header/page-header.less");
-@import url("page-header/main-nav/main-nav.less");
+@import "blocks/page-footer.less";
+@import "blocks/copyright.less";
+@import "blocks/social.less";
 
-@import url("page-footer/page-footer.less");
-@import url("page-footer/copyright/copyright.less");
-@import url("page-footer/social/social.less");
+@import "blocks/main-page.less";
+@import "blocks/promo.less";
+@import "blocks/feed-programs.less";
+@import "blocks/feed-description.less";
+@import "blocks/example.less";
+@import "blocks/dealers.less";
 
-@import url("main-page/main-page.less");
-@import url("main-page/promo/promo.less");
-@import url("main-page/feed-programs/feed-programs.less");
-@import url("main-page/feed-description/feed-description.less");
-@import url("main-page/example/example.less");
-@import url("main-page/dealers/dealers.less");
 
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  padding: 9px 73px;
+  background-color: @light-green-color;
+}
+
+.container {
+  padding: 0px 20px;
+}
