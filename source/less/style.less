@@ -1,43 +1,20 @@
+@import "global-rules.less";
 @import "variables.less";
 @import "mixin.less";
 @import "fonts.less";
 @import "blocks/page-header.less";
 @import "blocks/main-nav.less";
-
 @import "blocks/page-footer.less";
 @import "blocks/copyright.less";
 @import "blocks/social.less";
-
 @import "blocks/main-page.less";
 @import "blocks/promo.less";
 @import "blocks/feed-programs.less";
 @import "blocks/feed-description.less";
 @import "blocks/example.less";
 @import "blocks/dealers.less";
-
-
-body {
-  font-family: "Oswald", "Arial", sans-serif;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.button {
-  padding: 9px 73px;
-  background-color: @light-green-color;
-}
-
-.container {
-  padding: 0px 20px;
-}
+@import "blocks/program-selection.less";
+@import "blocks/form.less";
+@import "blocks/visually-hidden.less";
+@import "blocks/container.less";
+@import "blocks/button.less";
