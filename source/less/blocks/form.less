@@ -1,0 +1,68 @@
+.form__pet-info {
+  margin: 0px;
+  margin-bottom: 26px;
+  padding: 0px;
+  padding-bottom: 19.3px;
+  border: none;
+  border-bottom: 1px solid @footer-grey-color;
+}
+
+.form__pet-info-list {
+  .list-style-disabler();
+  padding-bottom: 24px;
+  border-bottom: 1px solid @footer-grey-color;
+}
+
+.form__pet-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form__label {
+  margin-right: 14px;
+  .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+}
+
+.form__input {
+  flex-grow: 1;
+  padding: 13.5px 0px;
+  padding-left: 15px;
+  border: 1px solid @form-border-grey-color;
+  &::placeholder {
+    .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+  }
+}
+
+.form__program-selection-list {
+  .list-style-disabler();
+  padding-top: 22px;
+}
+
+.form__radio-label {
+  .fstyle(16px, 18px, @special-dark-grey-2-color, uppercase);
+}
+
+.form__program-selection-item {
+  margin-bottom: 12.5px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form__owner-contacts {
+  border: none;
+}
+
+.form__heading {
+  .fstyle(24px, 26px, @special-dark-grey-2-color);
+  margin-bottom: 35px;
+}
+
+.form__owner-contacts-list {
+  .list-style-disabler();
+}
