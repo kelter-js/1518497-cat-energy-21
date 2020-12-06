@@ -30,12 +30,18 @@
 
 .form__input {
   flex-grow: 1;
-  padding: 13.5px 0px;
+  padding-top: 16px;
+  padding-bottom: 12px;
   padding-left: 15px;
   border: 1px solid @form-border-grey-color;
   &::placeholder {
     .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+    font-family: "Oswald", "Arial", sans-serif;
   }
+}
+
+.form__owner-contacts .form__input {
+  border: 1px solid @border-grey-color;
 }
 
 .form__program-selection-list {
@@ -45,6 +51,7 @@
 
 .form__radio-label {
   .fstyle(16px, 18px, @special-dark-grey-2-color, uppercase);
+  margin-left: 45px;
 }
 
 .form__program-selection-item {
@@ -55,14 +62,83 @@
 }
 
 .form__owner-contacts {
+  margin: 0px;
+  margin-bottom: 23.5px;
+  padding: 0px;
   border: none;
 }
 
 .form__heading {
-  .fstyle(24px, 26px, @special-dark-grey-2-color);
   margin-bottom: 35px;
+  .fstyle(24px, 26px, @special-dark-grey-2-color);
+  font-weight: normal;
 }
 
 .form__owner-contacts-list {
   .list-style-disabler();
+}
+
+.form__owner-contacts-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form__user-commentary {
+  width: 318px;
+  height: 148px;
+  margin-top: 37px;
+  margin-bottom: 18px;
+  padding-left: 15px;
+  padding-top: 9px;
+  border: 1px solid @form-border-grey-color;
+  box-sizing: border-box;
+  resize: none;
+  &::placeholder {
+    .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+    font-family: "Oswald", "Arial", sans-serif;
+  }
+}
+
+.form__additional {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.form__additional .form__heading {
+  margin-bottom: 34px;
+}
+
+.form__additonal-list {
+  .list-style-disabler();
+  margin-bottom: 34px;
+}
+
+.form__additonal-item {
+  margin: 0px;
+  margin-bottom: 13px;
+  padding: 0px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form__checkbox-label {
+  margin-left: 46px;
+  .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+}
+
+.form__button {
+  width: 280px;
+  min-height: 40px;
+  margin-bottom: 21px;
+  .fstyle(16px, 20px, @white-color, uppercase);
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: normal;
+  border: none;
 }
