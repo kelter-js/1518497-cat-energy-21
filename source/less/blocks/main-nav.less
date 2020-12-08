@@ -1,5 +1,21 @@
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__list {
   .list-style-disabler();
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-width: 492px;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: @tablet-width) {
+    margin-right: 33px;
+  }
 }
 
 .main-nav__item a {
