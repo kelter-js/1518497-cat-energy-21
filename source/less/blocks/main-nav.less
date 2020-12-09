@@ -5,16 +5,23 @@
 }
 
 .main-nav__list {
+  display: flex;
+  width: 440px;
   .list-style-disabler();
-  @media (min-width: @tablet-width) {
-    display: flex;
-    min-width: 492px;
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+  @media (min-width: @desktop-width) {
+    width: 478px;
   }
 }
 
 .main-nav__item {
   @media (min-width: @tablet-width) {
     margin-right: 33px;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
