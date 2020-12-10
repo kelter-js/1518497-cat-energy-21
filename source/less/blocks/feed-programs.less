@@ -1,5 +1,11 @@
 .feed-programs {
   margin-bottom: 27px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 .feed-programs__list {
   .list-style-disabler();
@@ -16,9 +22,10 @@
   margin-bottom: 20px;
   @media (min-width: @tablet-width) {
     width: 594px;
-    min-height: 295px;
+    min-height: 242px;
     margin-bottom: 30px;
     padding-top: 77px;
+    padding-bottom: 53px;
     padding-left: 52px;
     padding-right: 62px;
     background-color: @basic-grey-color;
@@ -40,6 +47,9 @@
 .feed-programs__wrapper {
   padding: 20px 20px;
   background-color: @basic-grey-color;
+  @media (min-width: @tablet-width) {
+    padding: 0px;
+  }
   @media (min-width: @desktop-width) {
     padding: 0px;
   }

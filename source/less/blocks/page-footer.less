@@ -1,15 +1,40 @@
 .page-footer {
-  max-width: 320px;
+  min-width: 320px;
   padding-top: 39px;
   background-color: @basic-grey-color;
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    padding-top: 0px;
+  }
 }
 
 .page-footer__logo {
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
 }
 
 .page-footer__socials {
   margin-bottom: 22px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
+}
+
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 34px;
+    padding-top: 55px;
+    padding-bottom: 61px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
 }

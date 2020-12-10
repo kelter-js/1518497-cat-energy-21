@@ -3,10 +3,22 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 4px;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0px;
+  }
 }
 
 .copyright__link {
   .link-style-reset();
   .fstyle(16px, 18.4px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__link-icon {
+  @media (min-width: @tablet-width) {
+    height: 34px;
+  }
 }
