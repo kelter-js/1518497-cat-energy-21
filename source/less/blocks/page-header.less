@@ -1,1 +1,18 @@
-
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    margin-bottom: 62px;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    margin-bottom: 32px;
+  }
+}

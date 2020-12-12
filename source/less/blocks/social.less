@@ -6,6 +6,13 @@
   padding-left: 75px;
   border-top: 1px solid @footer-grey-color;
   border-bottom: 1px solid @footer-grey-color;
+  @media (min-width: @tablet-width) {
+    min-height: 28px;
+    border: none;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 0px;
+  }
 }
 
 .social__item {

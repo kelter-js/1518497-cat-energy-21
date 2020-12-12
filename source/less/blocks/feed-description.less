@@ -1,10 +1,31 @@
 .feed-description {
-  width: 280px;
   margin-bottom: 42px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+    padding-bottom: 47px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0px;
+    padding-bottom: 11px;
+  }
 }
 
 .feed-description__list {
   .list-style-disabler();
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: none;
+    column-gap: 0px;
+    row-gap: 0px;
+  }
 }
 
 .feed-description__heading {
@@ -12,14 +33,30 @@
   padding-top: 0px;
   .fstyle(36px, 40px, @black-color);
   font-weight: 500;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .feed-description__item {
   min-height: 60px;
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    max-width: 249px;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 280px;
+    max-width: 230px;
+  }
 }
 
 .feed-description__text {
   margin-left: 80px;
   .fstyle(14px, 18px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
+  @media (min-width: @tablet-width) {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 151px;
+  }
 }

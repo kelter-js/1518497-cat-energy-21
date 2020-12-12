@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -36,7 +37,7 @@
 
       <h1 class="visually-hidden">Кэт энерджи — функциональное питание для котов</h1>
 
-      <section class="promo">
+      <section class="promo container">
 
           <div class="promo__slogan-background">
             <div class="promo__slogan-wrapper">
@@ -45,18 +46,18 @@
             </div>
           </div>
 
-          <div class="promo__button-wrapper container">
+          <div class="promo__button-wrapper">
             <a class="promo__button button" href="form.html">подобрать программу</a>
           </div>
 
       </section>
 
-      <section class="feed-programs">
+      <section class="feed-programs container">
 
         <h2 class="visually-hidden">Программы питания</h2>
 
         <ul class="feed-programs__list">
-          <li class="feed-programs__item feed-programs__item--weight-loss container">
+          <li class="feed-programs__item feed-programs__item--weight-loss">
             <div class="feed-programs__wrapper">
               <h3 class="feed-programs__heading">похудение</h3>
               <p class="feed-programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
@@ -64,7 +65,7 @@
             </div>
           </li>
 
-          <li class="feed-programs__item feed-programs__item--gather-mass container">
+          <li class="feed-programs__item feed-programs__item--gather-mass">
             <div class="feed-programs__wrapper">
               <h3 class="feed-programs__heading">набор массы</h3>
               <p class="feed-programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -96,13 +97,16 @@
 
       </section>
 
-      <section class="example container">
-        <div class="example__wrapper slider">
+      <section class="example">
+
+        <div class="example__main-wrapper container">
           <h2 class="example__heading">Живой пример</h2>
 
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__wrapper slider container">
 
-          <div class="example__amount-container">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+
+            <div class="example__amount-container">
 
             <div class="example__amount-wrapper">
               <p class="example__amount">5 кг</p>
@@ -117,29 +121,32 @@
                 <p class="example__amount-annotation">затрачено времени</p>
               </div>
             </div>
-          </div>
 
-          <p class="example__final-price">Затраты на питание: 15 000 РУБ.</p>
+            <p class="example__final-price">Затраты на питание: 15 000 РУБ.</p>
+
+          </div>
 
           <div class="example__item slider__item slider__item--before">
             <img class="example__image-cat-before" src="/img/mobile-cat-before.png" alt="Изображение кота до добавления корма в рацион и после" width="311" height="232">
             <img class="example__image-cat-after" src="/img/mobile-cat-after.png" alt="Изображение кота до добавления корма в рацион и после" width="251" height="240">
           </div>
 
-          <div class="example__slider-controls-wrapper">
-            <button class="example__slider-text" type="button">было</button>
-            <div class="example__slider-container">
+        </div>
+
+            <div class="example__slider-controls-wrapper">
+              <button class="example__slider-text" type="button">было</button>
+              <div class="example__slider-container">
               <div class="example__slider-toggle"></div>
             </div>
             <button class="example__slider-text" type="button">стало</button>
           </div>
-
         </div>
+
       </section>
 
       <section class="dealers">
 
-        <div class="dealers__wrapper">
+        <div class="dealers__wrapper container">
           <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
           <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
@@ -154,7 +161,7 @@
 
     <footer class="page-footer">
 
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper container">
 
         <div class="page-footer__logo">
           <a class="page-footer__logo-name">
@@ -162,7 +169,7 @@
           </a>
         </div>
 
-        <div class="page-footer__socials social container">
+        <div class="page-footer__socials social">
 
           <ul class="social__list">
 
@@ -194,7 +201,7 @@
 
         </div>
 
-        <div class="page-footer__copyright copyright container">
+        <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link-icon" href="https://htmlacademy.ru/intensive/adaptive">
             <svg role="img" aria-label="Логотип HTML Academy" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">

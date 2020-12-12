@@ -1,7 +1,6 @@
 .promo__slogan-wrapper {
   position: relative;
-  width: 320px;
-  height: 275px;
+  min-height: 275px;
   padding-top: 27px;
   text-align: center;
   background: rgba(@light-green-color, 65%);
@@ -9,25 +8,65 @@
       content: '';
       position: absolute;
       top: 167px;
-      left: 20px;
+      left: 0px;
       display: block;
       width: 280px;
       height: 270px;
       background-color: transparent;
       background-image: url("/img/mobile-index-food-can.png");
     }
+  @media (min-width: @tablet-width) {
+    min-height: 181px;
+    padding-top: 0px;
+    padding-left: 30px;
+    background-color: @white-color;
+    text-align: left;
+    &::after {
+      display: none;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 181px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    background-color: @white-color;
+    text-align: left;
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .promo__slogan-background {
   background: url("/img/background-cat-desktop.jpg") no-repeat;
-  width: 320px;
-  height: 302px;
+  min-height: 302px;
   margin-bottom: 138px;
+  @media (min-width: @tablet-width) {
+    min-height: 181px;
+    margin-left: 87px;
+    margin-bottom: 20px;
+    background: none;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 181px;
+    margin-bottom: 52px;
+    margin-left: 0px;
+    background: none;
+  }
 }
 
 .promo {
-  width: 320px;
   margin-bottom: 22px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 499px;
+    padding-left: 190px;
+    padding-right: 30px;
+  }
 }
 
 .promo__slogan {
@@ -36,16 +75,48 @@
   margin-bottom: 25px;
   .fstyle(36px, 36px, @white-color);
   font-weight: 100;
+  @media (min-width: @tablet-width) {
+    color: @black-color;
+  }
 }
 
 .promo__intro {
   margin: 0px;
   padding: 0px;
   .fstyle(14px, 14px, @white-color, uppercase);
+  @media (min-width: @tablet-width) {
+    color: @black-color;
+  }
 }
 
 .promo__button {
+  display: inline-block;
+  vertical-align: middle;
   .link-style-reset();
   .fstyle(14px, 18px, @white-color, uppercase);
   font-weight: 400;
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 0px;
+  }
+}
+
+.promo__button-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 626px;
+    min-height: 580px;
+    margin-right: 30px;
+    padding-top: 29px;
+    padding-left: 82px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    min-height: 55px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+  }
 }

@@ -1,13 +1,49 @@
 .dealers {
+  padding: 0px;
+  margin: 0px auto;
   width: 320px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    min-height: 305px;
+    width: 1440px;
+    margin: 0px auto;
+    padding: 0px;
+    padding-top: 95px;
+  }
 }
 
 .dealers__wrapper {
   display: flex;
   justify-content: center;
-  padding: 0px 19px;
+  width: 280px;
+  padding: 0px 20px;
   padding-top: 28px;
   padding-bottom: 22px;
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    width: 625px;
+    min-height: 88px;
+    padding: 0px;
+    padding-top: 62px;
+    padding-left: 71px;
+    padding-right: 72px;
+    padding-bottom: 51px;
+  }
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    max-width: 405px;
+    margin-left: 110px;
+    padding: 0px;
+    padding-left: 76px;
+    padding-right: 89px;
+    padding-top: 62px;
+    padding-bottom: 51px;
+    justify-content: center;
+
+  }
 }
 
 .dealers__heading {
@@ -15,6 +51,11 @@
   padding: 0px;
   .fstyle(16px, 18px, @special-dark-grey-3-color, uppercase);
   font-weight: normal;
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    vertical-align: middle;
+    width: 171px;
+  }
 }
 
 .dealers__address {
@@ -22,10 +63,21 @@
   padding: 0px;
   .fstyle(14px, 20px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    vertical-align: middle;
+    width: 159px;
+  }
 }
 
 .dealers__map-wrapper {
   height: 362px;
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .dealers__wrapper--background {
