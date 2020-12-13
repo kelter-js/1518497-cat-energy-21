@@ -3,69 +3,65 @@
   min-height: 275px;
   padding-top: 27px;
   text-align: center;
-  background: rgba(@light-green-color, 65%);
     &::after {
       content: '';
       position: absolute;
       top: 167px;
-      left: 0px;
+      left: 20px;
       display: block;
       width: 280px;
       height: 270px;
       background-color: transparent;
       background-image: url("/img/mobile-index-food-can.png");
     }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: block;
+      width: 320px;
+      height: 302px;
+      background: url("/img/background-cat-desktop.jpg") no-repeat;
+      z-index: -1;
+    }
   @media (min-width: @tablet-width) {
     min-height: 181px;
     padding-top: 0px;
-    padding-left: 30px;
+    padding-left: 117px;
     background-color: @white-color;
     text-align: left;
     &::after {
       display: none;
     }
+    &::before {
+      display: none;
+    }
   }
   @media (min-width: @desktop-width) {
     min-height: 181px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
+    padding-left: 190px;
     background-color: @white-color;
     text-align: left;
     &::after {
       display: none;
     }
-  }
-}
-
-.promo__slogan-background {
-  background: url("/img/background-cat-desktop.jpg") no-repeat;
-  min-height: 302px;
-  margin-bottom: 138px;
-  @media (min-width: @tablet-width) {
-    min-height: 181px;
-    margin-left: 87px;
-    margin-bottom: 20px;
-    background: none;
-  }
-  @media (min-width: @desktop-width) {
-    min-height: 181px;
-    margin-bottom: 52px;
-    margin-left: 0px;
-    background: none;
+    &::before {
+      display: none;
+    }
   }
 }
 
 .promo {
   margin-bottom: 22px;
+  background: rgba(@light-green-color, 85%);
   @media (min-width: @tablet-width) {
     margin-bottom: 0px;
+    background: none;
   }
   @media (min-width: @desktop-width) {
     min-height: 499px;
-    padding-left: 190px;
-    padding-right: 30px;
+    background: none;
   }
 }
 
@@ -104,17 +100,23 @@
 }
 
 .promo__button-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: @white-color;
+  padding-top: 138px;
+
   @media (min-width: @tablet-width) {
+    display: block;
     width: 626px;
     min-height: 580px;
     margin-right: 30px;
     padding-top: 29px;
-    padding-left: 82px;
+    padding-left: 112px;
   }
   @media (min-width: @desktop-width) {
     width: 300px;
     min-height: 55px;
-    margin-left: 0px;
+    margin-left: 190px;
     margin-right: 0px;
     padding-top: 0px;
     padding-left: 0px;
