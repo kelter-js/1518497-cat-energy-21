@@ -5,6 +5,11 @@
   padding-bottom: 19.3px;
   border: none;
   border-bottom: 1px solid @footer-grey-color;
+  @media (min-width: @tablet-width) {
+    width: 630px;
+    margin-left: 41px;
+    margin-bottom: 71px;
+  }
 }
 
 .form__pet-info-list {
@@ -65,17 +70,31 @@
   margin: 0px;
   margin-bottom: 23.5px;
   padding: 0px;
-  border: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .form__heading {
   margin-bottom: 35px;
   .fstyle(24px, 26px, @special-dark-grey-2-color);
   font-weight: normal;
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 768px;
+    margin-bottom: 76px;
+  }
 }
 
 .form__owner-contacts-list {
   .list-style-disabler();
+  @media (min-width: @tablet-width) {
+    width: 635px;
+    margin-left: 38px;
+  }
 }
 
 .form__owner-contacts-item {
@@ -102,6 +121,15 @@
     .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
     font-family: "Oswald", "Arial", sans-serif;
   }
+  @media (min-width: @tablet-width) {
+    width: 608px;
+    margin-left: 40px;
+    margin-right: 67px;
+    margin-bottom: 65px;
+    margin-top: 0px;
+    padding-left: 19px;
+    padding-top: 10px;
+  }
 }
 
 .form__additional {
@@ -112,11 +140,21 @@
 
 .form__additional .form__heading {
   margin-bottom: 34px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .form__additonal-list {
   .list-style-disabler();
   margin-bottom: 34px;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+    margin-left: 40px;
+    margin-bottom: 72px;
+  }
 }
 
 .form__additonal-item {
@@ -126,11 +164,17 @@
   &:last-child {
     margin-bottom: 0px;
   }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
 }
 
 .form__checkbox-label {
   margin-left: 46px;
   .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+  @media (min-width: @tablet-width) {
+    margin-left: 19px;
+  }
 }
 
 .form__button {
@@ -141,4 +185,12 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: normal;
   border: none;
+}
+
+.form__send-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 41px;
+  }
 }

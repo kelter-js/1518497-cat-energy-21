@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page__body">
 
-    <header class="page-header">
+    <header class="page-header page-header--inner container">
 
       <a class="page-header__logo">
         <img src="img/mobile-header-logo.svg" width="191" height="37" alt="Логотип Кэт энерджи">
@@ -21,10 +22,10 @@
               <a href="index.html">главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="petalog.html">каталог продукции</a>
+              <a href="catalog.html">каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">подбор программы</a>
+              <a href="">подбор программы</a>
             </li>
           </ul>
         </div>
@@ -38,8 +39,10 @@
 
       <section class="program-selection container">
 
-        <h2 class="program-selection__heading">Подбор программы</h2>
-        <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="program-selection__info-wrapper">
+          <h2 class="program-selection__heading">Подбор программы</h2>
+          <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
 
         <form class="program-selection__form form" method="get" action="https://echo.htmlacademy.ru">
 
@@ -137,31 +140,34 @@
 
           </fieldset>
 
-          <button class="form__button button" type="submit">отправить заявку</button>
+          <div class="form__send-wrapper">
+            <button class="form__button button" type="submit">отправить заявку</button>
+            <p class="program-selection__footnote">* — Обязательные поля</p>
+          </div>
 
         </form>
 
-        <p class="program-selection__footnote">* — Обязательные поля</p>
-
       </section>
 
-      <section class="dealers">
+      <section class="dealers dealers--background">
 
-        <div class="dealers__wrapper dealers__wrapper--background">
-          <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
-          <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="container">
+          <div class="dealers__wrapper">
+            <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
+            <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
 
         <div class="dealers__map-wrapper">
-          <img src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
+          <img class="dealers__map-image" src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
         </div>
 
       </section>
-
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+
+      <div class="page-footer__wrapper container">
 
         <div class="page-footer__logo">
           <a class="page-footer__logo-name">
