@@ -1,11 +1,11 @@
 .program-selection {
   padding-top: 27px;
   padding-bottom: 32px;
-}
-
-.program-selection__info-wrapper {
-  width: 432px;
-  margin-left: 39px;
+  @media (min-width: @desktop-width) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 61px;
+  }
 }
 
 .program-selection__heading {
@@ -14,6 +14,14 @@
   margin-bottom: 37px;
   .fstyle(36px, 36px, @black-color);
   font-weight: normal;
+  @media (min-width: @tablet-width) {
+    margin-left: 39px;
+    margin-bottom: 54px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 0px;
+    margin-bottom: 56px;
+  }
 }
 
 .program-selection__text {
@@ -21,6 +29,13 @@
   margin-bottom: 39px;
   padding: 0px;
   .fstyle(14px, 18px, @black-color, uppercase);
+  @media (min-width: @tablet-width) {
+    margin-left: 39px;
+    margin-bottom: 66px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 0px;
+  }
 }
 
 .program-selection__footnote {
@@ -30,5 +45,8 @@
   .fstyle(14px, 16px, @black-color);
   font-family: "Arial", sans-serif;
   font-weight: normal;
+  @media (min-width: @desktop-width) {
+    margin-left: 81px;
+  }
 }
 

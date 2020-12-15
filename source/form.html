@@ -37,9 +37,9 @@
 
       <h1 class="visually-hidden">Кэт энерджи — функциональное питание для котов</h1>
 
-      <section class="program-selection container">
+      <section class="program-selection">
 
-        <div class="program-selection__info-wrapper">
+        <div class="program-selection__info-wrapper container">
           <h2 class="program-selection__heading">Подбор программы</h2>
           <p class="program-selection__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </div>
@@ -48,7 +48,6 @@
 
           <fieldset class="form__pet-info">
             <ul class="form__pet-info-list">
-
               <li class="form__pet-info-item">
                 <label class="form__label" for="pet-name">имя:*</label>
                 <input class="form__input" type="text" id="pet-name" name="name" placeholder="барсик" required>
@@ -66,24 +65,26 @@
 
             </ul>
 
-            <ul class="form__program-selection-list">
+            <div class="form__program-selection-wrapper">
+              <ul class="form__program-selection-list container">
 
-              <li class="form__program-selection-item">
-                <input class="form__radio-button" type="radio" value="weight-loss" name="program-type" id="feed-weight-lost" checked>
-                <label class="form__radio-label" for="feed-weight-lost">похудение</label>
-              </li>
+                <li class="form__program-selection-item">
+                  <input class="form__radio-button" type="radio" value="weight-loss" name="program-type" id="feed-weight-lost" checked>
+                  <label class="form__radio-label" for="feed-weight-lost">похудение</label>
+                </li>
 
-              <li class="form__program-selection-item">
-                <input class="form__radio-button" type="radio" value="gather-mass" name="program-type" id="feed-gather-mass">
-                <label class="form__radio-label" for="feed-gather-mass">набор массы</label>
-              </li>
+                <li class="form__program-selection-item">
+                  <input class="form__radio-button" type="radio" value="gather-mass" name="program-type" id="feed-gather-mass">
+                  <label class="form__radio-label" for="feed-gather-mass">набор массы</label>
+                </li>
 
-              <li class="form__program-selection-item">
-                <input class="form__radio-button" type="radio" value="suggest-program" name="program-type" id="user-cant-decide">
-                <label class="form__radio-label" for="user-cant-decide">не знаю (нужен ваш совет)</label>
-              </li>
+                <li class="form__program-selection-item">
+                  <input class="form__radio-button" type="radio" value="suggest-program" name="program-type" id="user-cant-decide">
+                  <label class="form__radio-label" for="user-cant-decide">не знаю (нужен ваш совет)</label>
+                </li>
 
-            </ul>
+              </ul>
+            </div>
 
           </fieldset>
 
@@ -91,7 +92,7 @@
 
             <legend class="form__heading">Контактные данные (владельца кота)</legend>
 
-            <ul class="form__owner-contacts-list">
+            <ul class="form__owner-contacts-list container">
 
               <li class="form__owner-contacts-item">
                 <label class="form__label" for="user-email">e-mail:*</label>
@@ -107,14 +108,16 @@
 
           </fieldset>
 
-          <label class="form__heading" for="user-commentary">Комментарий</label>
-          <textarea class="form__user-commentary" id="user-commentary" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="form__user-wrapper">
+            <label class="form__heading" for="user-commentary">Комментарий</label>
+            <textarea class="form__user-commentary" id="user-commentary" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
 
           <fieldset class="form__additional">
 
             <legend class="form__heading">Дополнительно</legend>
 
-            <ul class="form__additonal-list">
+            <ul class="form__additonal-list container">
 
               <li class="form__additonal-item">
                 <input class="form__checkbox" type="checkbox" name="sweetener" id="additional-sweetener" checked>
@@ -140,7 +143,7 @@
 
           </fieldset>
 
-          <div class="form__send-wrapper">
+          <div class="form__send-wrapper container">
             <button class="form__button button" type="submit">отправить заявку</button>
             <p class="program-selection__footnote">* — Обязательные поля</p>
           </div>
