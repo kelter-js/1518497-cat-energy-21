@@ -1,34 +1,27 @@
 .form__pet-info {
-  margin-bottom: 26px;
-  padding: 0px;
-  padding-bottom: 19.3px;
   border: none;
-  @media (min-width: @tablet-width) {
-    padding: 0px;
-    margin-bottom: 71px;
-    border-bottom: none;
-  }
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    width: 1217px;
-    margin: 0px auto;
+    margin-bottom: 69px;
   }
 }
 
 .form__pet-info-list {
   width: 280px;
   .list-style-disabler();
-  margin: 0px auto;
   margin-bottom: 24px;
   @media (min-width: @tablet-width) {
     width: 630px;
     margin-bottom: 72px;
+    margin-left: 41px;
     border-bottom: none;
   }
   @media (min-width: @desktop-width) {
     width: 569px;
+    min-height: 196px;
+    margin-bottom: 0px;
   }
 }
 
@@ -40,7 +33,21 @@
   &:last-child {
     margin-bottom: 0px;
   }
+  @media (min-width: @desktop-width) {
+    min-height: 52px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &:last-child .form__input {
+      margin-top: auto;
+    }
+    &:first-child .form__input {
+      margin-bottom: auto;
+    }
+  }
 }
+
 
 .form__label {
   margin-right: 14px;
@@ -67,6 +74,7 @@
 }
 
 .form__program-selection-wrapper {
+  margin-bottom: 26px;
   padding-top: 22px;
   padding-bottom: 20px;
   border-top: 1px solid @footer-grey-color;
@@ -81,13 +89,17 @@
   .list-style-disabler();
   margin: auto;
   @media (min-width: @tablet-width) {
-    width: 600px;
+    width: 598px;
+    min-height: 148px;
+    margin-bottom: 71px;
     padding: 25px 0px;
     padding-left: 28px;
     border: 1px solid @form-border-grey-color;
   }
   @media (min-width: @desktop-width) {
     width: 541px;
+    min-height: 144px;
+    margin-bottom: 0px;
     padding: 25px 0px;
     padding-left: 28px;
     border: 1px solid @form-border-grey-color;
@@ -110,84 +122,116 @@
 }
 
 .form__owner-contacts {
+  position: relative;
   margin: 0px;
-  margin-bottom: 40px;
   padding: 0px;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  border-top: 2px solid @light-green-color;
+  border: none;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    height: 2px;
+    width: 100%;
+    background: @light-green-color;
+    z-index: -1;
+  }
   @media (min-width: @tablet-width) {
     margin: 0px auto;
     margin-bottom: 65px;
+    &::after {
+      top: 20px;
+    }
   }
   @media (min-width: @desktop-width) {
     margin: 0px auto;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
   }
 }
 
-.form__user-wrapper {
-  display: flex;
-  flex-direction: column;
-  border-top: 2px solid @light-green-color;
-  @media (min-width: @tablet-width) {
+.form__comment {
+  position: relative;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    height: 2px;
+    width: 100%;
+    background: @light-green-color;
+    z-index: -1;
   }
-}
-
-.form__user-wrapper .form__heading {
-  margin-top: -16px;
   @media (min-width: @tablet-width) {
-    width: 512px;
-    margin-top: -23px;
-    padding-left: 39px;
-    padding-right: 42px;
-  }
-  @media (min-width: @desktop-width) {
-    width: 182px;
-    margin-top: -23px;
-    padding-left: 40px;
-    padding-right: 40px;
+    &::after {
+      top: 20px;
+    }
   }
 }
 
 .form__heading {
-  width: 261px;
-  padding: 0px;
-  padding-left: 19px;
-  margin: 0px auto;
   margin-bottom: 35px;
+  margin-left: -20px;
   .fstyle(24px, 26px, @special-dark-grey-2-color);
   font-weight: normal;
-  background: @white-color;
+  background-color: transparent;
   @media (min-width: @tablet-width) {
-    width: 512px;
+    margin-left: 0px;
     margin-bottom: 76px;
-    padding-left: 39px;
-    padding-right: 42px;
     .fstyle(36px, 36px, @black-color);
   }
   @media (min-width: @desktop-width) {
+    margin-left: -40px;
+  }
+}
+
+.form__text-wrapper {
+  display: block;
+  width: 187px;
+  height: 52px;
+  padding-left: 19px;
+  padding-right: 15px;
+  background-color: white;
+  @media (min-width: @tablet-width) {
+    width: 521px;
+    padding-left: 39px;
+    padding-right: 42px;
+  }
+  @media (min-width: @tablet-width) {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
+.form__comment .form__text-wrapper {
+  width: 121px;
+  padding-right: 22px;
+  @media (min-width: @tablet-width) {
+    width: 182px;
+    padding-left: 39px;
+    padding-right: 38px;
+  }
+}
+
+.form__comment .form__heading {
+  margin-bottom: 38px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
 .form__owner-contacts-list {
-  .list-style-disabler();
-  margin: 0px auto;
+  list-style: none;
+  margin-bottom: 23.5px;
   @media (min-width: @tablet-width) {
     width: 635px;
-    margin: auto;
   }
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1219px;
-    margin: 0px auto;
-    padding-left: 110px;
-    padding-right: 110px;
+    width: 1220px;
+    margin-bottom: 0px;
   }
 }
 
@@ -200,6 +244,9 @@
     margin-bottom: 0px;
   }
   @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: @desktop-width) {
     margin-bottom: 0px;
   }
 }
@@ -215,13 +262,14 @@
   border: 1px solid @form-border-grey-color;
   resize: none;
   &::placeholder {
+    width: 631px;
     .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
     font-family: "Oswald", "Arial", sans-serif;
   }
   @media (min-width: @tablet-width) {
     min-height: 162px;
-    width: 608px;
-    margin: 0px auto;
+    width: 598px;
+    margin-left: 41px;
     margin-bottom: 65px;
     margin-top: 0px;
     padding-left: 19px;
@@ -229,23 +277,45 @@
     padding-bottom: 0px;
   }
   @media (min-width: @desktop-width) {
-    min-height: 162px;
     width: 1199px;
-    margin: 0px auto;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
     margin-top: 10px;
     padding-right: 0px;
-    padding-left: 19px;
-    padding-top: 10px;
-    padding-bottom: 0px;
   }
 }
 
 .form__additional {
+  position: relative;
   margin: 0px;
   padding: 0px;
   border: none;
-  border-top: 2px solid @light-green-color;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    height: 2px;
+    width: 100%;
+    background: @light-green-color;
+    z-index: -1;
+  }
+  @media (min-width: @tablet-width) {
+    &::after {
+      top: 20px;
+    }
+  }
+}
+
+.form__additional .form__text-wrapper {
+  width: 141px;
+  padding-right: 24px;
+  @media (min-width: @tablet-width) {
+    width: 211px;
+    padding-right: 41px;
+    padding-left: 40px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 212px;
+  }
 }
 
 .form__additional .form__heading {
@@ -253,38 +323,32 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
   }
-  @media (min-width: @desktop-width) {
-    width: 212px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
 }
 
-.form__additonal-list {
-  .list-style-disabler();
-  margin: auto;
+.form__additional-list {
+  list-style: none;
   margin-bottom: 34px;
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 32px;
-    width: 565px;
+    width: 502px;
     min-height: 112px;
-    margin: 0px auto;
-    margin-bottom: 72px;
+    margin-bottom: 54px;
+    padding-left: 0px;
   }
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1196px;
+    width: 1220px;
     min-height: 40px;
-    margin: 0px auto;
     margin-bottom: 61px;
+    padding-left: 110px;
   }
 }
 
-.form__additonal-item {
+.form__additional-item {
   margin: 0px;
   margin-bottom: 13px;
   padding: 0px;
@@ -312,19 +376,22 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: normal;
   border: none;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0px;
+  }
 }
 
 .form__send-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    min-height: 52px;
     width: 524px;
-    padding-left: 0px;
-    padding-right: 41px;
+    margin-bottom: 86px;
   }
   @media (min-width: @desktop-width) {
-    align-items: center;
-    width: 829px;
-    padding-right: 367px;
+    width: 1220px;
+    margin-bottom: 82px;
   }
 }
