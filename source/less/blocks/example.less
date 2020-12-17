@@ -26,14 +26,10 @@
 }
 
 .example__main-wrapper {
-  width: 280px;
-  margin: 0px auto;
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     width: auto;
   }
   @media (min-width: @desktop-width) {
-    width: 1220px;
-    margin: 0px auto;
     display: grid;
     grid-template-columns: 610px 610px;
     grid-template-rows: 194px 462px;

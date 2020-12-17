@@ -28,7 +28,6 @@
   @media (min-width: @tablet-width) {
     min-height: 181px;
     padding-top: 0px;
-    padding-left: 117px;
     background-color: @white-color;
     text-align: left;
     &::after {
@@ -40,7 +39,6 @@
   }
   @media (min-width: @desktop-width) {
     min-height: 181px;
-    padding-left: 190px;
     background-color: @white-color;
     text-align: left;
     &::after {
@@ -73,7 +71,11 @@
   .fstyle(36px, 36px, @white-color);
   font-weight: 100;
   @media (min-width: @tablet-width) {
+    margin-left: 87px;
     color: @black-color;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
   }
 }
 
@@ -82,7 +84,11 @@
   padding: 0px;
   .fstyle(14px, 14px, @white-color, uppercase);
   @media (min-width: @tablet-width) {
+    margin-left: 88px;
     color: @black-color;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
   }
 }
 
@@ -93,30 +99,27 @@
   .fstyle(14px, 18px, @white-color, uppercase);
   font-weight: 400;
   @media (min-width: @tablet-width) {
-    margin-left: 0px;
+    margin-left: 82px;
   }
   @media (min-width: @desktop-width) {
-    margin-left: 0px;
+    margin-left: 80px;
   }
 }
 
 .promo__button-wrapper {
   display: flex;
   justify-content: center;
-  background-color: @white-color;
   padding-top: 138px;
+  background-color: @white-color;
+  @media (max-width: @mobile-width-only) {
+    width: auto;
+  }
   @media (min-width: @tablet-width) {
     display: block;
-    width: 709px;
     min-height: 580px;
-    margin: 0px auto;
     padding-top: 29px;
-    padding-left: 112px;
   }
   @media (min-width: @desktop-width) {
-    width: 1220px;
     min-height: 55px;
-    margin-left: 190px;
-    margin: 0px auto;
   }
 }
