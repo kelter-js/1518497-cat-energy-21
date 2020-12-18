@@ -3,6 +3,10 @@
   .fstyle(24px, 24px, @black-color);
   font-weight: normal;
   background-color: transparent;
+  @media (min-width: @desktop-width) {
+    grid-area: heading;
+    margin-bottom: 81px;
+  }
 }
 
 .additional-goods__text-wrapper {
@@ -27,12 +31,18 @@
 
 .additional-goods__list {
   list-style: none;
+  padding: 0px;
   margin-bottom: 39px;
   @media (min-width: @tablet-width) {
     margin-bottom: 69px;
-    padding: 0px;
     border: 1px solid @border-grey-color;
     box-sizing: border-box;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -55,9 +65,16 @@
       border-bottom: none;
     }
   }
+  @media (min-width: @desktop-width) {
+    height: 40px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
 }
 
-.additional-goods__item-wrapper{
+.additional-goods__item-wrapper {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -65,6 +82,11 @@
     grid-template-areas:
     'name info'
     'buy buy';
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -77,6 +99,9 @@
   @media (min-width: @tablet-width) {
     grid-area: name;
   }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0px;
+  }
 }
 
 .additional-goods__item-info-container {
@@ -87,6 +112,9 @@
   @media (min-width: @tablet-width) {
     grid-area: info;
     justify-content: flex-end;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0px;
   }
 }
 
@@ -113,6 +141,24 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 76px;
   }
+  @media (min-width: @desktop-width) {
+    padding-top: 0px;
+    padding-bottom: 86px;
+    &::after {
+      top: 15px;
+    }
+  }
+}
+
+.additional-goods__wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 896px 245px;
+    grid-template-rows: 289px;
+    grid-template-areas:
+    'table gift';
+    column-gap: 80px;
+  }
 }
 
 .additional-goods__button {
@@ -124,9 +170,11 @@
   .link-style-reset();
   .fstyle(16px, 20px, @white-color, uppercase);
   font-weight: normal;
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-area: buy;
-    flex-grow: 1;
+    width: 62px;
+    padding-left: 285px;
+    padding-right: 285px;
   }
 }
 
@@ -135,7 +183,6 @@
   padding-top: 186px;
   text-align: center;
   background-image: url("/img/mobile-gift-cat-photo.png");
-  background-position: 20px 0px;
   background-repeat: no-repeat;
   @media (min-width: @tablet-width) {
     display: flex;
@@ -144,6 +191,13 @@
     min-height: 200px;
     padding-top: 0px;
     text-align: right;
+  }
+  @media (min-width: @desktop-width) {
+    grid-area: gift;
+    width: 245px;
+    padding-top: 185px;
+    padding-bottom: 42px;
+    box-sizing: border-box;
   }
 }
 
@@ -155,8 +209,13 @@
   .fstyle(16px, 20px, @white-color);
   font-weight: normal;
   font-family: "Arial", sans-serif;
+  text-align: center;
   @media (min-width: @tablet-width) {
     margin-right: 124px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    margin: 0px auto;
   }
 }
 
