@@ -1,25 +1,82 @@
 .additional-goods__heading {
+  margin-bottom: 36px;
   .fstyle(24px, 24px, @black-color);
   font-weight: normal;
+  background-color: transparent;
+}
+
+.additional-goods__text-wrapper {
+  display: block;
+  width: 226px;
+  margin-left: -20px;
+  padding-right: 22px;
+  padding-left: 19px;
+  background-color: @white-color;
+  @media (min-width: @tablet-width) {
+    width: 338px;
+    margin-left: -0px;
+    padding-left: 37px;
+    padding-right: 36px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 35px;
+  }
 }
 
 .additional-goods__list {
-  .list-style-disabler();
-  margin-bottom: 34px;
+  list-style: none;
+  margin-bottom: 39px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+    padding: 0px;
+    border: 1px solid @border-grey-color;
+    box-sizing: border-box;
+  }
 }
 
 .additional-goods__item {
   padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid @border-grey-color;
-  border-top: 1px solid @border-grey-color;
+  &:first-child {
+    border-top: 1px solid @border-grey-color;
+  }
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+    padding-right: 38px;
+    &:first-child {
+      border-top: none;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
+
+.additional-goods__item-wrapper{
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 42.5px 42.5px;
+    grid-template-areas:
+    'name info'
+    'buy buy';
+  }
+}
+
 .additional-goods__goods-name {
   margin: 0px;
   margin-bottom: 13px;
   padding: 0px;
   .fstyle(16px, 16px, @special-dark-grey-2-color, uppercase);
   font-weight: normal;
+  @media (min-width: @tablet-width) {
+    grid-area: name;
+  }
 }
 
 .additional-goods__item-info-container {
@@ -27,9 +84,15 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  @media (min-width: @tablet-width) {
+    grid-area: info;
+    justify-content: flex-end;
+  }
 }
 
 .additional-goods {
+  position: relative;
+  padding-top: 25px;
   padding-bottom: 35px;
   &__info,
   &__price {
@@ -37,6 +100,18 @@
     padding: 0px;
     .fstyle(14px, 14px, @special-dark-grey-color);
     font-family: "Arial", sans-serif;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    height: 2px;
+    width: 100%;
+    background: @light-green-color;
+    z-index: -1;
+  }
+  @media (min-width: @tablet-width) {
+    padding-bottom: 76px;
   }
 }
 
@@ -49,18 +124,44 @@
   .link-style-reset();
   .fstyle(16px, 20px, @white-color, uppercase);
   font-weight: normal;
+  @media (min-width: @tablet-width) {
+    grid-area: buy;
+    flex-grow: 1;
+  }
 }
 
 .additional-goods__gift-container {
-  width: 222px;
   min-height: 103px;
   padding-top: 186px;
-  padding-left: 58px;
+  text-align: center;
   background-image: url("/img/mobile-gift-cat-photo.png");
+  background-position: 20px 0px;
+  background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 200px;
+    padding-top: 0px;
+    text-align: right;
+  }
 }
 
 .additional-goods__text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 161px;
+  margin: 0px auto;
   .fstyle(16px, 20px, @white-color);
   font-weight: normal;
   font-family: "Arial", sans-serif;
+  @media (min-width: @tablet-width) {
+    margin-right: 124px;
+  }
+}
+
+.additional-goods__info {
+  @media (min-width: @tablet-width) {
+    margin-right: 51px;
+  }
 }

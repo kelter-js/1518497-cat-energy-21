@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header page-header--catalog container">
 
       <a class="page-header__logo">
         <img src="img/mobile-header-logo.svg" width="191" height="37" alt="Логотип Кэт энерджи">
@@ -17,11 +18,11 @@
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item">
               <a href="index.html">главная</a>
             </li>
-            <li class="main-nav__item">
-              <a href="petalog.html">каталог продукции</a>
+            <li class="main-nav__item main-nav__item--active">
+              <a href="">каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a href="form.html">подбор программы</a>
@@ -38,13 +39,15 @@
 
       <section class="main-goods">
 
-        <h2 class="main-goods__heading">Каталог продукции</h2>
+        <div class="container">
+          <h2 class="main-goods__heading">Каталог продукции</h2>
+        </div>
 
-        <ul class="main-goods__list">
+        <ul class="main-goods__list container">
 
           <li class="main-goods__item">
 
-            <div class="main-goods__item-wrapper container container">
+            <div class="main-goods__item-wrapper">
               <div class="main-goods__image-container">
                 <a class="main-goods__image-link" href="">
                   <img class="main-goods__goods-image" src="/img/mobile-food-can-1st.png" alt="" width="68" height="86">
@@ -78,7 +81,7 @@
           </li>
 
           <li class="main-goods__item">
-            <div class="main-goods__item-wrapper container">
+            <div class="main-goods__item-wrapper">
             <div class="main-goods__image-container">
               <a class="main-goods__image-link" href="">
                 <img class="main-goods__goods-image" src="/img/mobile-food-can-2nd.png" alt="" width="84" height="100">
@@ -111,7 +114,7 @@
           </li>
 
           <li class="main-goods__item">
-            <div class="main-goods__item-wrapper container">
+            <div class="main-goods__item-wrapper">
             <div class="main-goods__image-container">
               <a class="main-goods__image-link" href="">
                 <img class="main-goods__goods-image" src="/img/mobile-food-can-3rd.png" alt="" width="68" height="78">
@@ -144,7 +147,7 @@
           </li>
 
           <li class="main-goods__item">
-            <div class="main-goods__item-wrapper container">
+            <div class="main-goods__item-wrapper">
             <div class="main-goods__image-container">
               <a class="main-goods__image-link" href="">
                 <img class="main-goods__goods-image" src="/img/mobile-food-can-4th.png" alt="" width="84" height="100">
@@ -177,7 +180,7 @@
           </li>
 
           <li class="main-goods__item">
-            <div class="main-goods__item-wrapper container">
+            <div class="main-goods__item-wrapper">
             <div class="main-goods__image-container">
               <a class="main-goods__image-link" href="">
                 <img class="main-goods__goods-image" src="/img/mobile-food-can-5th.png" alt="" width="68" height="78">
@@ -210,7 +213,7 @@
           </li>
 
           <li class="main-goods__item">
-            <div class="main-goods__item-wrapper container">
+            <div class="main-goods__item-wrapper">
             <div class="main-goods__image-container">
               <a class="main-goods__image-link" href="">
                 <img class="main-goods__goods-image" src="/img/mobile-food-can-6th.png" alt="" width="84" height="100">
@@ -243,7 +246,7 @@
           </li>
 
           <li class="main-goods__item">
-            <div class="main-goods__item-wrapper container">
+            <div class="main-goods__item-wrapper">
             <div class="main-goods__image-container">
               <a class="main-goods__image-link" href="">
                 <img class="main-goods__goods-image" src="/img/mobile-food-can-7th.png" alt="" width="72" height="84">
@@ -275,25 +278,26 @@
             </div>
           </li>
 
-        </ul>
+          <li class="main-goods__item">
+              <div class="main-goods__show-more-wrapper">
+                <p class="main-goods__small-heading">Показать еще 100500 товаров</p>
+                <p class="main-goods__text">На самом деле вкусов гораздо больше!</p>
+                <a class="main-goods__show-more-button" href="">показать все</a>
+              </div>
+          </li>
 
-        <div class="main-goods__show-more-container">
-          <div class="main-goods__show-more-wrapper container">
-            <p class="main-goods__small-heading">Показать еще 100500 товаров</p>
-            <p class="main-goods__text">На самом деле вкусов гораздо больше!</p>
-            <a class="main-goods__show-more-button" href="">показать все</a>
-          </div>
-        </div>
+        </ul>
 
       </section>
 
-      <section class="additional-goods container">
-        <h2 class="additional-goods__heading">Дополнительные товары</h2>
+      <section class="additional-goods">
+        <h2 class="additional-goods__heading container"><span class="additional-goods__text-wrapper">Дополнительные товары</span></h2>
 
-        <ul class="additional-goods__list">
+        <ul class="additional-goods__list container">
 
           <li class="additional-goods__item">
-            <h3 class="additional-goods__goods-name">Сахарозаменитель</h3>
+            <div class="additional-goods__item-wrapper">
+              <h3 class="additional-goods__goods-name">Сахарозаменитель</h3>
 
             <div class="additional-goods__item-info-container">
               <p class="additional-goods__info">1 упаковка (100 г)</p>
@@ -301,9 +305,11 @@
             </div>
 
             <a class="button additional-goods__button" href="">заказать</a>
+            </div>
           </li>
 
           <li class="additional-goods__item">
+            <div class="additional-goods__item-wrapper">
             <h3 class="additional-goods__goods-name">питьевая вода</h3>
 
             <div class="additional-goods__item-info-container">
@@ -312,9 +318,11 @@
             </div>
 
             <a class="button additional-goods__button" href="">заказать</a>
+          </div>
           </li>
 
           <li class="additional-goods__item">
+            <div class="additional-goods__item-wrapper">
             <h3 class="additional-goods__goods-name">молоко</h3>
 
             <div class="additional-goods__item-info-container">
@@ -323,9 +331,11 @@
             </div>
 
             <a class="button additional-goods__button" href="">заказать</a>
+            </div>
           </li>
 
           <li class="additional-goods__item">
+            <div class="additional-goods__item-wrapper">
             <h3 class="additional-goods__goods-name">витамины</h3>
 
             <div class="additional-goods__item-info-container">
@@ -334,33 +344,36 @@
             </div>
 
             <a class="button additional-goods__button" href="">заказать</a>
+            </div>
           </li>
 
         </ul>
 
-        <div class="additional-goods__gift-container">
+        <div class="additional-goods__gift-container container">
           <p class="additional-goods__text">Закажите все и получите чехол для кота в подарок!</p>
         </div>
 
       </section>
 
-      <section class="dealers">
+      <section class="dealers dealers--background">
 
-        <div class="dealers__wrapper dealers__wrapper--background">
-          <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
-          <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="container">
+          <div class="dealers__wrapper">
+            <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
+            <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
 
         <div class="dealers__map-wrapper">
-          <img src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
+          <img class="dealers__map-image" src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
         </div>
 
       </section>
-
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+
+      <div class="page-footer__wrapper container">
 
         <div class="page-footer__logo">
           <a class="page-footer__logo-name">
