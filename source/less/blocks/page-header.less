@@ -1,11 +1,18 @@
 .page-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  padding-top: 11px;
+  min-height: 37px;
+  padding-bottom: 17.3px;
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     padding-top: 24px;
+    margin: 0px auto;
     margin-bottom: 62px;
   }
   @media (min-width: @desktop-width) {
@@ -37,4 +44,10 @@
     padding-top: 54px;
     margin-bottom: 73.5px;
   }
+}
+
+.page-header__logo {
+  height: 37px;
+  width: 277px;
+  margin: 0px auto;
 }
