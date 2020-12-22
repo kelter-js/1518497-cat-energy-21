@@ -1,7 +1,7 @@
 .example {
   background-color: @darker-grey-color;
   padding-top: 27px;
-  padding-bottom: 31px;
+  padding-bottom: 25px;
   @media (min-width: @tablet-width) {
     padding: 0px;
     padding-top: 43px;
@@ -49,6 +49,7 @@
     width: 708px;
     margin: 0px auto;
     margin-bottom: 63px;
+    .fstyle(60px, 60px, @black-color);
   }
   @media (min-width: @desktop-width) {
     grid-area: heading;
@@ -84,6 +85,7 @@
   font-family: "Arial", sans-serif;
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
+    .fstyle(16px, 24px, @special-dark-grey-color);
   }
   @media (min-width: @desktop-width) {
     display: inline-block;
@@ -97,7 +99,7 @@
   position: relative;
   min-width: 124px;
   min-height: 56px;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
   text-align: center;
   border: 1px solid @border-grey-color;
   border-radius: 3px;
@@ -105,9 +107,10 @@
     min-height: 75px;
     min-width: 160px;
     margin-right: 42px;
+    margin-bottom: 60px;
   }
 }
-
+/*маргин 250px потому что я так понимаю, див с котами будет убран,а пикчи добавлены псевдоэлементами и абсолютно спозиционированы*/
 .example__amount-container {
   display: flex;
   justify-content: space-between;
@@ -116,7 +119,7 @@
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    padding-top: 43px;
+    margin-bottom: 250px;
   }
   @media (min-width: @desktop-width) {
     flex-wrap: wrap;
@@ -131,6 +134,9 @@
   padding: 0px;
   padding-top: 13px;
   .fstyle(24px, 24px, @black-color, uppercase);
+  @media (min-width: @tablet-width) {
+    .fstyle(30px, 37px, @black-color, uppercase);
+  }
 }
 
 .example__amount-annotation-wrapper {
@@ -146,6 +152,9 @@
   margin: 0px;
   .fstyle(12px, 12px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
+  @media (min-width: @tablet-width) {
+    .fstyle(14px, 14px, @special-dark-grey-color);
+  }
 }
 
 .example__item {
@@ -162,11 +171,15 @@
 }
 
 .example__final-price {
-  margin-left: 46px;
+  margin: 0px auto;
   .fstyle(14px, 20px, @black-color, uppercase);
   @media (min-width: @tablet-width) {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
     margin-left: 125px;
     margin-bottom: 0px;
+    .fstyle(20px, 20px, @black-color, uppercase);
   }
   @media (min-width: @desktop-width) {
     padding-top: 0px;
@@ -176,8 +189,13 @@
 
 .example__slider-controls-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  @media (max-width: @mobile-width-only) {
+    width: 228px;
+    margin: 0px auto;
+  }
   @media (min-width: @tablet-width) {
+    justify-content: center;
     padding: 0px;
     padding-top: 358px;
     padding-bottom: 64px;
@@ -189,8 +207,8 @@
     padding: 0px;
     padding-top: 358px;
     padding-bottom: 64px;
-    padding-right: 103px;
-    padding-left: 73px;
+    padding-right: 88px;
+    padding-left: 88px;
     background: none;
   }
 }
@@ -205,7 +223,6 @@
 }
 
 .example__slider-text {
-  margin-right: 12px;
   .fstyle(16px, 20px, @black-color, uppercase);
   font-family: "Oswald", "Arial", sans-serif;
   background: none;
@@ -214,5 +231,6 @@
     min-height: 40px;
     margin: 0px;
     padding: 0px;
+    .fstyle(20px, 30px, @black-color, uppercase);
   }
 }

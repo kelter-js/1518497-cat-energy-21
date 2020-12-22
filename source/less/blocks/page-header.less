@@ -6,21 +6,26 @@
   padding-top: 11px;
   min-height: 37px;
   padding-bottom: 17.3px;
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding-top: 24px;
-    margin: 0px auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
     margin-bottom: 62px;
   }
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
-    margin-bottom: 32px;
+    padding-top: 53px;
+    margin-bottom: 111px;
   }
 }
 
@@ -49,5 +54,11 @@
 .page-header__logo {
   height: 37px;
   width: 277px;
-  margin: 0px auto;
+  @media (max-width: @mobile-width-only) {
+    padding-left: 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin-right: 60px;
+    padding-top: 26px;
+  }
 }
