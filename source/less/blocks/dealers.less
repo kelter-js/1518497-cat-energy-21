@@ -1,11 +1,11 @@
 .dealers {
+  position: relative;
   padding: 0px;
   @media (min-width: @tablet-width) {
     padding: 0px;
   }
   @media (min-width: @desktop-width) {
     min-height: 305px;
-    padding-top: 95px;
   }
 }
 
@@ -25,15 +25,17 @@
     padding-bottom: 51px;
   }
   @media (min-width: @desktop-width) {
+    position: absolute;
     align-items: center;
     max-width: 405px;
+    margin-top: 95px;
     padding: 0px;
     padding-left: 76px;
     padding-right: 89px;
     padding-top: 62px;
     padding-bottom: 51px;
     justify-content: space-between;
-
+    background-color: @white-color;
   }
 }
 
@@ -70,7 +72,9 @@
     background-color: transparent;
   }
   @media (min-width: @desktop-width) {
-    display: none;
+    width: 1440px;
+    height: 400px;
+    margin: 0px auto;
   }
 }
 
