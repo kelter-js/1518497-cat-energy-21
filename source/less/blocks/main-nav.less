@@ -63,9 +63,6 @@
 
 .main-nav__list {
   .list-style-disabler();
-  @media (max-width: @mobile-width-only) {
-    margin-top: 16px;
-  }
   @media (min-width: @tablet-width) {
     display: flex;
     width: 492px;
@@ -91,10 +88,6 @@
     border-bottom: 1px solid @grey-border-header;
     &:first-child {
       border-top: 1px solid @grey-border-header;
-    }
-    &:last-child {
-      border-bottom: none;
-      padding-bottom: 6.7px;
     }
   }
   @media (min-width: @tablet-width) {
