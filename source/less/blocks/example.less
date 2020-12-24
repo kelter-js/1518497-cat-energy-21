@@ -1,11 +1,11 @@
 .example {
   background-color: @darker-grey-color;
   padding-top: 27px;
-  padding-bottom: 31px;
+  padding-bottom: 25px;
   @media (min-width: @tablet-width) {
     padding: 0px;
     padding-top: 43px;
-    background-color: transparent;
+    background: linear-gradient(to bottom, @white-color 66.5%, @darker-grey-color 66.5%)
   }
   @media (min-width: @desktop-width) {
     position: relative;
@@ -49,6 +49,7 @@
     width: 708px;
     margin: 0px auto;
     margin-bottom: 63px;
+    .fstyle(60px, 60px, @black-color);
   }
   @media (min-width: @desktop-width) {
     grid-area: heading;
@@ -84,6 +85,7 @@
   font-family: "Arial", sans-serif;
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
+    .fstyle(16px, 24px, @special-dark-grey-color);
   }
   @media (min-width: @desktop-width) {
     display: inline-block;
@@ -97,26 +99,31 @@
   position: relative;
   min-width: 124px;
   min-height: 56px;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
   text-align: center;
   border: 1px solid @border-grey-color;
   border-radius: 3px;
   @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
     min-height: 75px;
     min-width: 160px;
-    margin-right: 42px;
+  }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
   }
 }
-
+/*маргин 250px потому что я так понимаю, див с котами будет убран,а пикчи добавлены псевдоэлементами и абсолютно спозиционированы*/
 .example__amount-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 42px;
-  @media (min-width: @tablet-width) {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    padding-top: 43px;
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only){
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 42px;
+    margin-bottom: 250px;
   }
   @media (min-width: @desktop-width) {
     flex-wrap: wrap;
@@ -131,14 +138,33 @@
   padding: 0px;
   padding-top: 13px;
   .fstyle(24px, 24px, @black-color, uppercase);
+  @media (min-width: @tablet-width) {
+    .fstyle(30px, 37px, @black-color, uppercase);
+  }
 }
 
 .example__amount-annotation-wrapper {
   position: absolute;
   top: 48px;
-  width: 85px;
-  margin-left: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  width: 75px;
+  margin-left: 18.5px;
   background-color: @darker-grey-color;
+  @media (min-width: @tablet-width) {
+    top: 47px;
+    height: 30px;
+    width: auto;
+    margin-left: 0px;
+    padding-left: 7px;
+    padding-right: 8px;
+    padding-top: 20px;
+    background-color: @white-color;
+  }
+  @media (min-width: @desktop-width) {
+    background-color: @basic-grey-color;
+  }
 }
 
 .example__amount-annotation {
@@ -146,6 +172,9 @@
   margin: 0px;
   .fstyle(12px, 12px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
+  @media (min-width: @tablet-width) {
+    .fstyle(14px, 14px, @special-dark-grey-color);
+  }
 }
 
 .example__item {
@@ -162,11 +191,15 @@
 }
 
 .example__final-price {
-  margin-left: 46px;
+  margin: 0px auto;
   .fstyle(14px, 20px, @black-color, uppercase);
   @media (min-width: @tablet-width) {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
     margin-left: 125px;
     margin-bottom: 0px;
+    .fstyle(20px, 20px, @black-color, uppercase);
   }
   @media (min-width: @desktop-width) {
     padding-top: 0px;
@@ -176,12 +209,16 @@
 
 .example__slider-controls-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  @media (max-width: @mobile-width-only) {
+    width: 228px;
+    margin: 0px auto;
+  }
   @media (min-width: @tablet-width) {
+    justify-content: center;
     padding: 0px;
     padding-top: 358px;
     padding-bottom: 64px;
-    background-color: @darker-grey-color;
   }
   @media (min-width: @desktop-width) {
     grid-area: slider;
@@ -189,14 +226,14 @@
     padding: 0px;
     padding-top: 358px;
     padding-bottom: 64px;
-    padding-right: 103px;
-    padding-left: 73px;
+    padding-right: 88px;
+    padding-left: 88px;
     background: none;
   }
 }
 
 .example__slider-container {
-  max-width: 84px;
+  min-width: 84px;
   @media (min-width: @tablet-width) {
     min-width: 428px;
     margin-left: 14px;
@@ -205,7 +242,6 @@
 }
 
 .example__slider-text {
-  margin-right: 12px;
   .fstyle(16px, 20px, @black-color, uppercase);
   font-family: "Oswald", "Arial", sans-serif;
   background: none;
@@ -214,5 +250,6 @@
     min-height: 40px;
     margin: 0px;
     padding: 0px;
+    .fstyle(20px, 30px, @black-color, uppercase);
   }
 }

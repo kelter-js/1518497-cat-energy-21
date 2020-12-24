@@ -22,11 +22,12 @@
       display: block;
       width: 320px;
       height: 302px;
-      background: url("/img/background-cat-desktop.jpg") no-repeat;
+      background: url("/img/background-cat-desktop.png") no-repeat;
       z-index: -1;
     }
   @media (min-width: @tablet-width) {
     min-height: 181px;
+    margin-bottom: 20px;
     padding-top: 0px;
     background-color: @white-color;
     text-align: left;
@@ -39,6 +40,7 @@
   }
   @media (min-width: @desktop-width) {
     min-height: 181px;
+    margin-bottom: 52px;
     background-color: @white-color;
     text-align: left;
     &::after {
@@ -52,7 +54,7 @@
 
 .promo {
   margin-bottom: 22px;
-  background: linear-gradient(to bottom, rgba(@light-green-color, 85%) 61%, @white-color 61%);
+  background: linear-gradient(to bottom, rgba(@light-green-color, 85%) 63.5%, @white-color 63.5%);
   @media (min-width: @tablet-width) {
     margin-bottom: 0px;
     margin: 0px auto;
@@ -60,6 +62,7 @@
   }
   @media (min-width: @desktop-width) {
     min-height: 499px;
+    margin-bottom: 136px;
     background: none;
   }
 }
@@ -69,13 +72,16 @@
   padding: 0px;
   margin-bottom: 25px;
   .fstyle(36px, 36px, @white-color);
-  font-weight: 100;
+  font-weight: 400;
   @media (min-width: @tablet-width) {
+    width: 414px;
     margin-left: 87px;
-    color: @black-color;
+    margin-bottom: 41px;
+    .fstyle(60px, 60px, @black-color);
   }
   @media (min-width: @desktop-width) {
     margin-left: 80px;
+    margin-bottom: 40px;
   }
 }
 
@@ -85,7 +91,7 @@
   .fstyle(14px, 14px, @white-color, uppercase);
   @media (min-width: @tablet-width) {
     margin-left: 88px;
-    color: @black-color;
+    .fstyle(20px, 20px, @black-color, uppercase);
   }
   @media (min-width: @desktop-width) {
     margin-left: 80px;
@@ -100,6 +106,8 @@
   font-weight: 400;
   @media (min-width: @tablet-width) {
     margin-left: 82px;
+    padding: 17px 26px;
+    .fstyle(20px, 20px, @white-color, uppercase);
   }
   @media (min-width: @desktop-width) {
     margin-left: 80px;
