@@ -1,4 +1,16 @@
 body {
   margin: 0px;
   font-family: "Oswald", "Arial", sans-serif;
+  @media (min-width: @desktop-width)  {
+    &::after {
+      content: "";
+      top: 0px;
+      right: 0px;
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      background-color: rgba(@light-green-color, 0.85);
+      z-index: 1;
+    }
+  }
 }
