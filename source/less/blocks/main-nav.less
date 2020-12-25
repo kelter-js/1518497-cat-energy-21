@@ -63,13 +63,10 @@
 
 .main-nav__list {
   .list-style-disabler();
-  @media (max-width: @mobile-width-only) {
-    margin-top: 16px;
-  }
   @media (min-width: @tablet-width) {
     display: flex;
     width: 492px;
-    margin-top: 23px;
+    margin-top: 42px;
   }
   @media (min-width: @desktop-width) {
     width: 501px;
@@ -92,10 +89,6 @@
     &:first-child {
       border-top: 1px solid @grey-border-header;
     }
-    &:last-child {
-      border-bottom: none;
-      padding-bottom: 6.7px;
-    }
   }
   @media (min-width: @tablet-width) {
     margin-right: 33px;
@@ -115,6 +108,12 @@
     .fstyle(18px, 24px, @black-color, uppercase);
   }
   @media (min-width: @desktop-width) {
+    .fstyle(20px, 30px, @black-color, uppercase);
+  }
+}
+
+.main-nav__item--contrast-color a {
+  @media (min-width: @desktop-width) {
     .fstyle(20px, 30px, @white-color, uppercase);
   }
 }
@@ -132,6 +131,9 @@
       background: @light-green-color;
     }
   }
+}
+
+.main-nav__item--active.main-nav__item--contrast-color {
   @media (min-width: @desktop-width) {
     &::before {
       background: @white-color;
