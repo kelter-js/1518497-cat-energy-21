@@ -1,8 +1,10 @@
 .additional-goods__heading {
   margin-bottom: 36px;
-  .fstyle(24px, 24px, @black-color);
   font-weight: normal;
   background-color: transparent;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+  }
   @media (min-width: @desktop-width) {
     grid-area: heading;
     margin-bottom: 81px;
@@ -16,11 +18,13 @@
   padding-right: 22px;
   padding-left: 19px;
   background-color: @white-color;
+  .fstyle(24px, 24px, @black-color);
   @media (min-width: @tablet-width) {
     width: 338px;
     margin-left: -0px;
     padding-left: 37px;
     padding-right: 36px;
+    .fstyle(36px, 36px, @black-color);
   }
   @media (min-width: @desktop-width) {
     margin-left: -40px;
@@ -34,6 +38,7 @@
   padding: 0px;
   margin-bottom: 39px;
   @media (min-width: @tablet-width) {
+    margin: 0px;
     margin-bottom: 69px;
     border: 1px solid @border-grey-color;
     box-sizing: border-box;
@@ -77,8 +82,9 @@
 .additional-goods__item-wrapper {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 42.5px 42.5px;
+    grid-template-columns: 316.5px 316.5px;
+    row-gap: 23.7px;
+    grid-template-rows: 23.3px 38px;
     grid-template-areas:
     'name info'
     'buy buy';
@@ -98,8 +104,11 @@
   font-weight: normal;
   @media (min-width: @tablet-width) {
     grid-area: name;
+    margin-bottom: 0px;
+    .fstyle(20px, 20px, @special-dark-grey-2-color, uppercase);
   }
   @media (min-width: @desktop-width) {
+    width: 323px;
     margin-bottom: 0px;
   }
 }
@@ -112,9 +121,13 @@
   @media (min-width: @tablet-width) {
     grid-area: info;
     justify-content: flex-end;
+    margin-bottom: 0px;
   }
   @media (min-width: @desktop-width) {
+    width: 286px;
+    justify-content: space-between;
     margin-bottom: 0px;
+    margin-right: 40px;
   }
 }
 
@@ -139,14 +152,15 @@
     z-index: -1;
   }
   @media (min-width: @tablet-width) {
+    padding-top: 0px;
     padding-bottom: 76px;
+    &::after {
+      top: 22px;
+    }
   }
   @media (min-width: @desktop-width) {
     padding-top: 0px;
     padding-bottom: 86px;
-    &::after {
-      top: 15px;
-    }
   }
 }
 
@@ -176,6 +190,12 @@
     padding-left: 285px;
     padding-right: 285px;
   }
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    height: 20px;
+    padding: 10px 0px;
+    text-align: center;
+  }
 }
 
 .additional-goods__gift-container {
@@ -186,7 +206,7 @@
   background-repeat: no-repeat;
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     min-height: 200px;
     padding-top: 0px;
@@ -211,16 +231,29 @@
   font-family: "Arial", sans-serif;
   text-align: center;
   @media (min-width: @tablet-width) {
+    margin: 0px 0px;
     margin-right: 124px;
+    text-align: left;
   }
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 161px;
     margin: 0px auto;
+    text-align: center;
   }
 }
 
 .additional-goods__info {
   @media (min-width: @tablet-width) {
-    margin-right: 51px;
+    margin-right: 57px;
+    .fstyle(16px, 20px, @special-dark-grey-color);
+  }
+  @media (min-width: @desktop-width) {
+    margin-right: 0px;
+  }
+}
+
+.additional-goods__price {
+  @media (min-width: @tablet-width) {
+    .fstyle(16px, 20px, @special-dark-grey-color);
   }
 }
