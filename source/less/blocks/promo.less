@@ -13,6 +13,11 @@
       height: 270px;
       background-color: transparent;
       background-image: url("/img/mobile-index-food-can.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/mobile-index-food-can@2x.png");
+        background-size: 280px auto;
+      }
     }
     &::before {
       content: '';
@@ -24,6 +29,11 @@
       height: 302px;
       background: url("/img/background-cat-desktop.png") no-repeat;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background: url("/img/background-cat-desktop@2x.png");
+        background-size: 320px auto;
+      }
     }
   @media (min-width: @tablet-width) {
     min-height: 181px;
@@ -105,6 +115,7 @@
   .fstyle(14px, 18px, @white-color, uppercase);
   font-weight: 400;
   @media (min-width: @tablet-width) {
+    position: relative;
     margin-left: 82px;
     padding: 17px 26px;
     .fstyle(20px, 20px, @white-color, uppercase);
