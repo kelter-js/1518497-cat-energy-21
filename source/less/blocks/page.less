@@ -1,0 +1,31 @@
+.page__body--greenbox {
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      top: 0px;
+      right: 0px;
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      background-color: rgba(@light-green-color, 0.85);
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      top: 0px;
+      left: 50%;
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      background-image: url("/img/background-cat-desktop.png");
+      background-position: top right;
+      background-repeat: no-repeat;
+      z-index: 1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/background-cat-desktop@2x.png");
+        background-size: 720px auto;
+      }
+    }
+  }
+}
