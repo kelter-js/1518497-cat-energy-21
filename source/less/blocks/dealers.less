@@ -19,24 +19,17 @@
     justify-content: space-between;
     width: 625px;
     min-height: 88px;
-    padding: 0px;
-    padding-top: 62px;
-    padding-left: 71px;
-    padding-right: 72px;
-    padding-bottom: 51px;
+    padding: 62px 72px 51px 41px;
   }
   @media (min-width: @desktop-width) {
     position: absolute;
     align-items: center;
     max-width: 405px;
     margin-top: 95px;
-    padding: 0px;
-    padding-left: 76px;
-    padding-right: 89px;
-    padding-top: 62px;
-    padding-bottom: 51px;
+    padding: 62px 89px 51px 76px;
     justify-content: space-between;
     background-color: @white-color;
+    z-index: 1;
   }
 }
 
@@ -110,14 +103,17 @@
 }
 
 .dealers__map-wrapper {
+  position: relative;
   height: 362px;
+  width: 320px;
+  margin: 0px auto;
   @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 400px;
     background-color: transparent;
   }
   @media (min-width: @desktop-width) {
     width: 1440px;
-    height: 400px;
-    margin: 0px auto;
   }
 }
 
@@ -127,5 +123,6 @@
 
 .dealers__map-image {
   display: block;
+  max-width: 100%;
   margin: 0 auto;
 }

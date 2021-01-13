@@ -44,6 +44,12 @@
           <p class="promo__intro">Занялся&nbsp;собой?&nbsp;Займись&nbsp;котом!</p>
         </div>
 
+        <picture>
+          <source media="(min-width: 1440px)" srcset="/img/desktop-index-food-can.png 1x, /img/desktop-index-food-can@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="/img/tablet-index-food-can.png 1x, /img/tablet-index-food-can@2x.png 2x">
+          <img class="promo__image-food-can" src="/img/mobile-index-food-can.png" srcset="/img/mobile-index-food-can@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
+        </picture>
+
         <div class="promo__button-wrapper container">
           <a class="promo__button button" href="form.html">подобрать программу</a>
         </div>
@@ -125,8 +131,14 @@
           </div>
 
           <div class="example__item slider__item slider__item--before">
-            <img class="example__image-cat-before" src="/img/mobile-cat-before.png" alt="Изображение кота до добавления корма в рацион и после" width="311" height="232">
-            <img class="example__image-cat-after" src="/img/mobile-cat-after.png" alt="Изображение кота до добавления корма в рацион и после" width="251" height="240">
+            <picture>
+              <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.png 1x, /img/tablet-desktop-cat-before@2x.png 2x">
+              <img class="example__image-cat-before" src="/img/mobile-cat-before.png" srcset="/img/mobile-cat-before@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
+            </picture>
+            <picture class="example__image-hidden">
+              <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.png 1x, /img/tablet-desktop-cat-after@2x.png 2x">
+              <img class="example__image-cat-after" src="/img/mobile-cat-after.png" srcset="/img/mobile-cat-after@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
+            </picture>
           </div>
 
         </div>
@@ -151,7 +163,11 @@
         </div>
 
         <div class="dealers__map-wrapper">
-          <img class="dealers__map-image" src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="/img/desktop-map.png 1x, /img/desktop-map@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="/img/tablet-map.png 1x, /img/tablet-map@2x.png 2x">
+            <img class="dealers__map-image" src="/img/mobile-map.png" srcset="/img/mobile-map@2x.png 2x" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8">
+          </picture>
         </div>
 
       </section>
