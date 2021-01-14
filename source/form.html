@@ -124,22 +124,22 @@
             <ul class="form__additional-list container">
 
               <li class="form__additional-item">
-                <input class="form__checkbox" type="checkbox" name="sweetener" id="additional-sweetener" checked>
+                <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" id="additional-sweetener" checked>
                 <label class="form__checkbox-label" for="additional-sweetener">сахарозаменитель</label>
               </li>
 
               <li class="form__additional-item">
-                <input class="form__checkbox" type="checkbox" name="water" id="additional-water">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="water" id="additional-water">
                 <label class="form__checkbox-label" for="additional-water">питьевая вода</label>
               </li>
 
               <li class="form__additional-item">
-                <input class="form__checkbox" type="checkbox" name="milk" id="additional-milk">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="milk" id="additional-milk">
                 <label class="form__checkbox-label" for="additional-milk">молоко</label>
               </li>
 
               <li class="form__additional-item">
-                <input class="form__checkbox" type="checkbox" name="vitamins" id="additional-vitamins">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins" id="additional-vitamins">
                 <label class="form__checkbox-label" for="additional-vitamins">витамины</label>
               </li>
 
@@ -166,7 +166,11 @@
         </div>
 
         <div class="dealers__map-wrapper">
-          <img class="dealers__map-image" src="img/mobile-map.png" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" width="320" height="362">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="/img/desktop-map.png 1x, /img/desktop-map@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="/img/tablet-map.png 1x, /img/tablet-map@2x.png 2x">
+            <img class="dealers__map-image" src="/img/mobile-map.png" srcset="/img/mobile-map@2x.png 2x" alt="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8">
+          </picture>
         </div>
 
       </section>
