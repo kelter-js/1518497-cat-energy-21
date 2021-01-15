@@ -17,6 +17,10 @@
   .link-style-reset();
   .fstyle(16px, 18.4px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
   @media (min-width: @tablet-width) {
     margin-right: 22px;
   }
@@ -26,5 +30,14 @@
 }
 
 .copyright__link-icon {
+  width: 27px;
   height: 34px;
+  color: @footer-icon-color;
+  &:hover {
+    color: @light-green-color;
+  }
+  &:active,
+  &:focus {
+    opacity: 0.5;;
+  }
 }

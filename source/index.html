@@ -9,6 +9,7 @@
     <link rel="manifest" href="/manifest.json">
   </head>
   <body class="page__body page__body--greenbox">
+
     <header class="page-header container">
 
       <a class="page-header__logo">
@@ -49,6 +50,15 @@
           <p class="promo__intro">Занялся&nbsp;собой?&nbsp;Займись&nbsp;котом!</p>
         </div>
 
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="/img/desktop-index-food-can.webp 1x, /img/desktop-index-food-can@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-index-food-can.webp 1x, /img/tablet-index-food-can@2x.webp 2x">
+          <source type="image/webp" srcset="/img/mobile-index-food-can.webp 1x, /img/mobile-index-food-can@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="/img/desktop-index-food-can.png 1x, /img/desktop-index-food-can@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="/img/tablet-index-food-can.png 1x, /img/tablet-index-food-can@2x.png 2x">
+          <img class="promo__image-food-can" src="/img/mobile-index-food-can.png" srcset="/img/mobile-index-food-can@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
+        </picture>
+
         <div class="promo__button-wrapper container">
           <a class="promo__button button" href="form.html">подобрать программу</a>
         </div>
@@ -65,7 +75,7 @@
               <h3 class="feed-programs__heading">похудение</h3>
               <p class="feed-programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="feed-programs__link" href="catalog.html">каталог slim</a>
-              <svg class="feed-programs__weight-loss-icon" width="200" height="211" fill="none" role="img" aria-label="Комплекс питания для снижения массы питомца">
+              <svg class="feed-programs__weight-loss-icon" width="200" height="211" fill="none" role="img" aria-hidden="true">
                 <use xlink:href="/img/main-page-sprite.svg#weight-loss"/>
               </svg>
             </div>
@@ -76,7 +86,7 @@
               <h3 class="feed-programs__heading">набор массы</h3>
               <p class="feed-programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="feed-programs__link" href="catalog.html">каталог pro</a>
-              <svg class="feed-programs__gather-mass" width="200" height="211" fill="none" role="img" aria-label="Комплекс питания для снижения массы питомца">
+              <svg class="feed-programs__gather-mass" width="200" height="211" fill="none" role="img" aria-hidden="true">
                 <use xlink:href="/img/main-page-sprite.svg#gather-mass"/>
               </svg>
             </div>
@@ -90,32 +100,32 @@
         <div class="container">
           <h2 class="feed-description__heading">Как это работает</h2>
 
-        <ul class="feed-description__list">
-          <li class="feed-description__item">
-            <p class="feed-description__text">Функциональное питание содержит только полезные питательные вещества.</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-label="Консистенция">
-              <use xlink:href="/img/main-page-sprite.svg#substance"/>
-            </svg>
-          </li>
-          <li class="feed-description__item feed-description__item--2nd">
-            <p class="feed-description__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-label="Рецепт">
-              <use xlink:href="/img/main-page-sprite.svg#recipe"/>
-            </svg>
-          </li>
-          <li class="feed-description__item feed-description__item--3rd">
-            <p class="feed-description__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-label="Частота приема">
-              <use xlink:href="/img/main-page-sprite.svg#how-often"/>
-            </svg>
-          </li>
-          <li class="feed-description__item feed-description__item--4th">
-            <p class="feed-description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-label="Необходимое время">
-              <use xlink:href="/img/main-page-sprite.svg#required-time"/>
-            </svg>
-          </li>
-        </ul>
+          <ul class="feed-description__list">
+            <li class="feed-description__item">
+              <p class="feed-description__text">Функциональное питание содержит только полезные питательные вещества.</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#substance"/>
+              </svg>
+            </li>
+            <li class="feed-description__item feed-description__item--2nd">
+              <p class="feed-description__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#recipe"/>
+              </svg>
+            </li>
+            <li class="feed-description__item feed-description__item--3rd">
+              <p class="feed-description__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#how-often"/>
+              </svg>
+            </li>
+            <li class="feed-description__item feed-description__item--4th">
+              <p class="feed-description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#required-time"/>
+              </svg>
+            </li>
+          </ul>
         </div>
 
       </section>
@@ -150,11 +160,11 @@
           <div class="example__item slider__item slider__item--before">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.webp 1x, /img/tablet-desktop-cat-before@2x.webp 2x">
-              <source type="image/webp" srcset="/img/mobile-cat-before.webp 1x, /img/mobile-cat-before.webp 2x">
+              <source type="image/webp" srcset="/img/mobile-cat-before.webp 1x, /img/mobile-cat-before@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.png 1x, /img/tablet-desktop-cat-before@2x.png 2x">
               <img class="example__image-cat-before" src="/img/mobile-cat-before.png" srcset="/img/mobile-cat-before@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
             </picture>
-            <picture>
+            <picture class="example__image-hidden">
               <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.webp 1x, /img/tablet-desktop-cat-after@2x.webp 2x">
               <source type="image/webp" srcset="/img/mobile-cat-after.webp 1x, /img/mobile-cat-after@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.png 1x, /img/tablet-desktop-cat-after@2x.png 2x">
@@ -185,7 +195,7 @@
 
         <div class="dealers__map-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/desktop-map.webp 1x, /img/desktop-map@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="/img/desktop-map.webp 1x, /img/desktop-map@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-map.webp 1x, /img/tablet-map@2x.webp 2x">
             <source type="image/webp" srcset="/img/mobile-map.webp 1x, /img/mobile-map@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="/img/desktop-map.png 1x, /img/desktop-map@2x.png 2x">
@@ -243,8 +253,8 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link-icon" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg role="img" aria-label="Перейти на сайт HTML Academy" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+            <svg role="img" aria-label="Перейти на сайт HTML Academy" width="27" height="34" fill="none">
+              <use xlink:href="/img/main-page-sprite.svg#htmlLogo"/>
             </svg>
           </a>
         </div>
