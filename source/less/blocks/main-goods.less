@@ -271,15 +271,39 @@
 }
 
 .main-goods__show-more-wrapper {
+  position: relative;
   width: 280px;
   padding-top: 53px;
   text-align: center;
+  &::before,
+  &::after {
+    content: "";
+    top: 15px;
+    left: 124px;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background-color: @grey-plus-element-color;
+  }
+  &::after {
+    transform: rotate(-90deg);
+  }
   @media (min-width: @tablet-width) {
     width: 249px;
     margin: 0px auto;
     padding: 0px;
+    &::before,
+    &::after {
+      top: -79px;
+      left: 95px;
+      width: 60px;
+    }
   }
   @media (min-width: @desktop-width) {
     width: 167px;
+    &::before,
+    &::after {
+      left: 55px;
+    }
   }
 }
