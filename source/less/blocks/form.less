@@ -267,6 +267,7 @@
 }
 
 .form__owner-contacts-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -460,5 +461,49 @@
 .form__user-wrapper {
   @media (min-width: @desktop-width) {
     margin-bottom: 67px;
+  }
+}
+
+.form__input:disabled + .form__icon {
+  color: @light-green-color;
+}
+
+.form__input:focus:invalid + .form__icon {
+  color: @error-red-color;
+}
+
+.form__input + .form__icon {
+  color: @special-dark-grey-2-color;
+}
+
+.form__email-icon {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 20px;
+  height: 14px;
+  @media (min-width: @tablet-width) {
+    top: 19px;
+    right: 19px;
+    width: 18px;
+    height: 13px;
+  }
+  @media (min-width: @desktop-width) {
+    right: 20px;
+  }
+}
+
+.form__phone-icon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 20px;
+  height: 20px;
+  @media (min-width: @tablet-width) {
+    top: 16px;
+    right: 17px;
+  }
+  @media (min-width: @desktop-width) {
+    top: 15px;
   }
 }
