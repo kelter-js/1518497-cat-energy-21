@@ -9,6 +9,7 @@
     <link rel="manifest" href="/manifest.json">
   </head>
   <body class="page__body page__body--greenbox">
+
     <header class="page-header container">
 
       <a class="page-header__logo">
@@ -48,6 +49,15 @@
           <h2 class="promo__slogan">Функциональное питание для котов</h2>
           <p class="promo__intro">Занялся&nbsp;собой?&nbsp;Займись&nbsp;котом!</p>
         </div>
+
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="/img/desktop-index-food-can.webp 1x, /img/desktop-index-food-can@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-index-food-can.webp 1x, /img/tablet-index-food-can@2x.webp 2x">
+          <source type="image/webp" srcset="/img/mobile-index-food-can.webp 1x, /img/mobile-index-food-can@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="/img/desktop-index-food-can.png 1x, /img/desktop-index-food-can@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="/img/tablet-index-food-can.png 1x, /img/tablet-index-food-can@2x.png 2x">
+          <img class="promo__image-food-can" src="/img/mobile-index-food-can.png" srcset="/img/mobile-index-food-can@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
+        </picture>
 
         <div class="promo__button-wrapper container">
           <a class="promo__button button" href="form.html">подобрать программу</a>
@@ -90,32 +100,32 @@
         <div class="container">
           <h2 class="feed-description__heading">Как это работает</h2>
 
-        <ul class="feed-description__list">
-          <li class="feed-description__item">
-            <p class="feed-description__text">Функциональное питание содержит только полезные питательные вещества.</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
-              <use xlink:href="/img/main-page-sprite.svg#substance"/>
-            </svg>
-          </li>
-          <li class="feed-description__item feed-description__item--2nd">
-            <p class="feed-description__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
-              <use xlink:href="/img/main-page-sprite.svg#recipe"/>
-            </svg>
-          </li>
-          <li class="feed-description__item feed-description__item--3rd">
-            <p class="feed-description__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
-              <use xlink:href="/img/main-page-sprite.svg#how-often"/>
-            </svg>
-          </li>
-          <li class="feed-description__item feed-description__item--4th">
-            <p class="feed-description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
-              <use xlink:href="/img/main-page-sprite.svg#required-time"/>
-            </svg>
-          </li>
-        </ul>
+          <ul class="feed-description__list">
+            <li class="feed-description__item">
+              <p class="feed-description__text">Функциональное питание содержит только полезные питательные вещества.</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#substance"/>
+              </svg>
+            </li>
+            <li class="feed-description__item feed-description__item--2nd">
+              <p class="feed-description__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#recipe"/>
+              </svg>
+            </li>
+            <li class="feed-description__item feed-description__item--3rd">
+              <p class="feed-description__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#how-often"/>
+              </svg>
+            </li>
+            <li class="feed-description__item feed-description__item--4th">
+              <p class="feed-description__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <svg class="feed-description__icon" width="80" height="80" fill="none" role="img" aria-hidden="true">
+                <use xlink:href="/img/main-page-sprite.svg#required-time"/>
+              </svg>
+            </li>
+          </ul>
         </div>
 
       </section>
@@ -150,11 +160,11 @@
           <div class="example__item slider__item slider__item--before">
             <picture>
               <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.webp 1x, /img/tablet-desktop-cat-before@2x.webp 2x">
-              <source type="image/webp" srcset="/img/mobile-cat-before.webp 1x, /img/mobile-cat-before.webp 2x">
+              <source type="image/webp" srcset="/img/mobile-cat-before.webp 1x, /img/mobile-cat-before@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.png 1x, /img/tablet-desktop-cat-before@2x.png 2x">
               <img class="example__image-cat-before" src="/img/mobile-cat-before.png" srcset="/img/mobile-cat-before@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
             </picture>
-            <picture>
+            <picture class="example__image-hidden">
               <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.webp 1x, /img/tablet-desktop-cat-after@2x.webp 2x">
               <source type="image/webp" srcset="/img/mobile-cat-after.webp 1x, /img/mobile-cat-after@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.png 1x, /img/tablet-desktop-cat-after@2x.png 2x">
@@ -185,7 +195,7 @@
 
         <div class="dealers__map-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px)" srcset="/img/desktop-map.webp 1x, /img/desktop-map@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="/img/desktop-map.webp 1x, /img/desktop-map@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-map.webp 1x, /img/tablet-map@2x.webp 2x">
             <source type="image/webp" srcset="/img/mobile-map.webp 1x, /img/mobile-map@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="/img/desktop-map.png 1x, /img/desktop-map@2x.png 2x">
