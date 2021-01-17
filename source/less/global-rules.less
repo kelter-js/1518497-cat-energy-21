@@ -1,52 +1,5 @@
 body {
+  min-width: 320px;
   margin: 0px;
   font-family: "Oswald", "Arial", sans-serif;
-}
-
-.page__body--greenbox {
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 341px;
-      left: 50%;
-      margin-left: -355px;
-      width: 709px;
-      height: 609px;
-      background-image: url("/img/tablet-index-food-can.png");
-      background-color: transparent;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("/img/tablet-index-food-can@2x.png");
-        background-size: 709px auto;
-      }
-    }
-  }
-  @media (min-width: @desktop-width) {
-    &::after {
-      content: "";
-      top: 0px;
-      right: 0px;
-      position: absolute;
-      width: 50%;
-      height: 694px;
-      background-color: rgba(@light-green-color, 0.85);
-      z-index: 1;
-    }
-    &::before {
-      content: "";
-      top: 0px;
-      right: 0px;
-      position: absolute;
-      width: 50%;
-      height: 694px;
-      background-image: url("/img/background-cat-desktop.png");
-      z-index: 1;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("/img/background-cat-desktop@2x.png");
-        background-size: 720px auto;
-      }
-    }
-  }
 }
