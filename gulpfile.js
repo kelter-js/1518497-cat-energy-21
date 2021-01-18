@@ -48,6 +48,25 @@ const styles = () => {
 
 exports.styles = styles;
 
+//Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/icons/*.svg")
+  .pipe(svgstore())
+  .pipe(rename("main-sprite.svg"))
+  .pipe(gulp.dest("build/img/icons"))
+}
+
+//Webp
+
+const createWebp = () => {
+  return gulp.src("source/img**/*{jpg,png}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("build"))
+}
+
+exports.createWebp = createWebp;
+
 // Server
 
 const server = (done) => {
