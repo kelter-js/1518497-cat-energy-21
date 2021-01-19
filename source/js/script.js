@@ -1,4 +1,4 @@
-let mainMenu = document.querySelector(".main-nav--withoutjs");
+let mainMenu = document.querySelector(".main-nav");
 let mainMenuButton = document.querySelector(".main-nav__toggle");
 if(mainMenu.classList.contains("main-nav--withoutjs")) {
   mainMenu.classList.remove("main-nav--withoutjs")

@@ -7,7 +7,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlminify = require("gulp-htmlmin");
-const jsminify = require("gulp-uglify-es");
+const jsminify = require("gulp-uglify-es").default;
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
@@ -16,13 +16,13 @@ const sync = require("browser-sync").create();
 
 //HTML
 
-const htmlminify = () => {
+const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlminify({collapseWhitespace: true}))
   .pipe(gulp.dest("build"))
 }
 
-exports.htmlminify = htmlminify;
+exports.html = html;
 
 //Scripts
 
@@ -41,12 +41,13 @@ exports.scripts = scripts;
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/**/*.{jpg,png,svg}"
+    "source/img/**/*.{jpg,png,svg}",
+    "source/img/*.json"
   ],
   {
     base: "source",
   })
-  .pipe(guld.dest("build"));
+  .pipe(gulp.dest("build"));
 }
 
 exports.copy = copy;
@@ -98,7 +99,7 @@ const sprite = () => {
   return gulp.src("source/img/icons/*.svg")
   .pipe(svgstore())
   .pipe(rename("main-sprite.svg"))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("build/img/icons"))
 }
 
 exports.sprite = sprite;
@@ -134,7 +135,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(htmlminify, sync.reload));
+  gulp.watch("source/*.html", gulp.series(html, sync.reload));
 }
 
 //Build
@@ -143,7 +144,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     styles,
-    htmlminify,
+    html,
     scripts,
     sprite,
     copy,
@@ -158,7 +159,7 @@ exports.default = gulp.series(
   clean,
   gulp.parallel(
     styles,
-    htmlminify,
+    html,
     scripts,
     sprite,
     copy,
