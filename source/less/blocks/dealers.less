@@ -126,3 +126,26 @@
   max-width: 100%;
   margin: 0 auto;
 }
+
+.dealers__map-container {
+  margin: 0px auto;
+  padding: 0px;
+  height: 362px;
+  width: 320px;
+  @media (min-width: @tablet-width) {
+    height: 400px;
+    width: 768px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.dealers__map-container iframe {
+  width: inherit;
+  height: inherit;
+}
+
+.invisible {
+  display: none;
+}

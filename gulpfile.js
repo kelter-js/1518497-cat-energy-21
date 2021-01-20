@@ -20,6 +20,7 @@ const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlminify({collapseWhitespace: true}))
   .pipe(gulp.dest("build"))
+  .pipe(sync.stream());
 }
 
 exports.html = html;
@@ -81,6 +82,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -135,7 +137,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html", gulp.series(html));
 }
 
 //Build
