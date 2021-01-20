@@ -64,10 +64,12 @@
 .example__wrapper {
   padding: 0px;
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 708px;
     margin: 0px auto;
   }
   @media (min-width: @desktop-width) {
+    position: static;
     grid-area: info;
     max-width: 610px;
     padding: 0px;
@@ -183,14 +185,6 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 17px;
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
-  }
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 0px;
-    right: 70px;
-  }
 }
 
 .example__final-price {
@@ -257,6 +251,38 @@
   }
 }
 
-.example__image-hidden {
+.example__image--before,
+.example__image--after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    margin-left: -339px;
+    margin-bottom: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0px;
+    left: 75%;
+    margin-left: -345px;
+  }
+}
+
+.example__image--after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 340px;
+    left: 50%;
+    margin-left: -273px;
+    margin-bottom: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0px;
+    left: 72%;
+  }
+}
+
+.example__image--hidden {
   display: none;
 }

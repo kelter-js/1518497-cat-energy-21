@@ -157,14 +157,14 @@
 
           </div>
 
-          <div class="example__item slider__item slider__item--before">
-            <picture>
+          <div class="example__item slider__item">
+            <picture class="example__image--before">
               <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.webp 1x, /img/tablet-desktop-cat-before@2x.webp 2x">
               <source type="image/webp" srcset="/img/mobile-cat-before.webp 1x, /img/mobile-cat-before@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-before.png 1x, /img/tablet-desktop-cat-before@2x.png 2x">
               <img class="example__image-cat-before" src="/img/mobile-cat-before.png" srcset="/img/mobile-cat-before@2x.png 2x" alt="Изображение кота до добавления корма в рацион и после">
             </picture>
-            <picture class="example__image-hidden">
+            <picture class="example__image--after example__image--hidden">
               <source type="image/webp" media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.webp 1x, /img/tablet-desktop-cat-after@2x.webp 2x">
               <source type="image/webp" srcset="/img/mobile-cat-after.webp 1x, /img/mobile-cat-after@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="/img/tablet-desktop-cat-after.png 1x, /img/tablet-desktop-cat-after@2x.png 2x">
@@ -175,11 +175,11 @@
         </div>
 
         <div class="example__slider-controls-wrapper">
-          <button class="example__slider-text" type="button">было</button>
+          <button class="example__slider-text example__slider-text--before" type="button">было</button>
           <div class="example__slider-container">
           <div class="example__slider-toggle"></div>
         </div>
-        <button class="example__slider-text" type="button">стало</button>
+        <button class="example__slider-text example__slider-text--after" type="button">стало</button>
       </div>
     </div>
       </section>
