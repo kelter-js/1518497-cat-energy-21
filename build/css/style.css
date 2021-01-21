@@ -1088,14 +1088,14 @@ body {
   .example {
     padding: 0px;
     padding-top: 43px;
-    background: linear-gradient(to bottom, #FFFFFF 59.5%, #EAEAEA 59.5%);
+    background: linear-gradient(to bottom, #FFFFFF 57.3%, #EAEAEA 57.3%);
   }
 }
 @media (min-width: 1440px) {
   .example {
     position: relative;
     padding: 0px;
-    background: linear-gradient(to right, #F2F2F2 70%, #EAEAEA 70%);
+    background: linear-gradient(to right, #F2F2F2 71.1%, #EAEAEA 71.1%);
   }
   .example::before {
     content: "";
@@ -1224,7 +1224,11 @@ body {
     margin-bottom: 60px;
   }
 }
-/*маргин 250px потому что я так понимаю, див с котами будет убран,а пикчи добавлены псевдоэлементами и абсолютно спозиционированы*/
+@media (min-width: 1440px) {
+  .example__amount-wrapper {
+    margin-right: 42px;
+  }
+}
 .example__amount-container {
   display: flex;
   justify-content: space-between;
@@ -1236,7 +1240,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     column-gap: 42px;
-    margin-bottom: 250px;
+    margin-bottom: 190px;
   }
 }
 @media (min-width: 1440px) {
@@ -1244,6 +1248,7 @@ body {
     flex-wrap: wrap;
     max-width: 436px;
     padding-top: 0px;
+    justify-content: flex-start;
   }
 }
 .example__amount {
@@ -1308,11 +1313,13 @@ body {
     text-transform: none;
   }
 }
-.example__item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 17px;
+@media (max-width: 767px) {
+  .example__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 17px;
+  }
 }
 .example__final-price {
   margin: 0px auto;
@@ -1326,6 +1333,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     text-align: right;
+    margin-top: 12px;
     margin-left: 125px;
     margin-bottom: 0px;
     font-size: 20px;
@@ -1336,13 +1344,15 @@ body {
 }
 @media (min-width: 1440px) {
   .example__final-price {
-    padding-top: 0px;
+    margin-top: 0px;
     margin-left: 0px;
+    padding-top: 0px;
   }
 }
 .example__slider-controls-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 767px) {
   .example__slider-controls-wrapper {
@@ -1371,13 +1381,22 @@ body {
   }
 }
 .example__slider-container {
-  min-width: 84px;
+  position: relative;
+  width: 82px;
+  height: 12px;
+  background-color: #FFFFFF;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
 }
 @media (min-width: 768px) {
   .example__slider-container {
-    min-width: 428px;
+    width: 428px;
+    height: 6px;
     margin-left: 14px;
     margin-right: 11px;
+    background-color: #DCDCDC;
+    border: none;
+    border-radius: 6px;
   }
 }
 .example__slider-text {
@@ -1398,6 +1417,7 @@ body {
     line-height: 30px;
     color: #000000;
     text-transform: uppercase;
+    border-bottom: 1px dotted #b2b2b2;
   }
 }
 @media (min-width: 768px) {
@@ -1437,6 +1457,53 @@ body {
 }
 .example__image--hidden {
   display: none;
+}
+.example__slider-toggle {
+  position: absolute;
+  top: 3px;
+  width: 35px;
+  height: 6px;
+  background-color: #68B738;
+  border-radius: 6px;
+}
+@media (min-width: 768px) {
+  .example__slider-toggle {
+    top: -15px;
+    left: 50%;
+    width: 31px;
+    height: 31px;
+    margin-left: -17px;
+    background-color: #FFFFFF;
+    border: 2px solid #CDCDCD;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+  .example__slider-toggle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    background-color: #68B738;
+    border-radius: 6px;
+  }
+}
+@media (max-width: 767px) {
+  .example__slider-toggle--before {
+    left: 6px;
+  }
+}
+@media (max-width: 767px) {
+  .example__slider-toggle--after {
+    right: 6px;
+  }
+}
+.example__final-price--text {
+  margin-right: 63px;
 }
 .dealers {
   position: relative;
