@@ -111,7 +111,7 @@
     min-height: 144px;
     margin-bottom: 75px;
     padding-top: 25px;
-    padding-bottom: 29px;
+    padding-bottom: 25px;
     padding-left: 28px;
     border: 1px solid @form-border-grey-color;
   }
@@ -126,8 +126,41 @@
 }
 
 .form__radio-label {
+  position: relative;
   .fstyle(16px, 18px, @special-dark-grey-2-color, uppercase);
   margin-left: 45px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -46px;
+    width: 29px;
+    height: 29px;
+    border: 1px solid @border-grey-color;
+    border-radius: 50%;
+    @media (min-width: @tablet-width) {
+      top: -5px;
+      left: -60px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .form__radio-button:checked + &::before {
+    content: "";
+    position: absolute;
+    top: 5.5px;
+    left: -37px;
+    width: 13.5px;
+    height: 13.5px;
+    background-color: @light-green-color;
+    border-radius: 50%;
+    @media (min-width: @tablet-width) {
+      top: 7px;
+      left: -47.5px;
+      width: 18px;
+      height: 18px;
+    }
+  }
   @media (min-width: @tablet-width) {
     margin-left: 60px;
     .fstyle(20px, 30px, @special-dark-grey-2-color, uppercase);
@@ -135,12 +168,12 @@
 }
 
 .form__program-selection-item {
-  margin-bottom: 12.5px;
-  &:last-child {
-    margin-bottom: 0px;
-  }
+  margin-bottom: 25px;
   @media (min-width: @tablet-width) {
-    margin-bottom: 13px;
+    margin-bottom: 23px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
   @media (min-width: @desktop-width) {
     min-height: 40px;
@@ -389,7 +422,7 @@
 
 .form__additional-item {
   margin: 0px;
-  margin-bottom: 13px;
+  margin-bottom: 25px;
   padding: 0px;
   &:last-child {
     margin-bottom: 0px;
@@ -400,8 +433,37 @@
 }
 
 .form__checkbox-label {
-  margin-left: 18px;
+  position: relative;
+  margin-left: 46px;
   .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -46px;
+    width: 29px;
+    height: 29px;
+    border: 1px solid @border-grey-color;
+    @media (min-width: @tablet-width) {
+      top: -5px;
+      left: -59px;
+      width: 39px;
+      height: 39px;
+    }
+  }
+  .form__checkbox:checked + &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -39px;
+    width: 18px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+    @media (min-width: @tablet-width) {
+      top: 8px;
+      left: -47px;
+    }
+  }
   @media (min-width: @tablet-width) {
     margin-left: 59px;
     .fstyle(20px, 30px, @special-dark-grey-color, uppercase);
