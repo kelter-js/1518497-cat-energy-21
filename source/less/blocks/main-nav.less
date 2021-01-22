@@ -65,6 +65,7 @@
   .list-style-disabler();
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     width: 492px;
     margin-top: 42px;
   }
@@ -81,6 +82,13 @@
 }
 
 .main-nav__item {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
   @media (max-width: @mobile-width-only) {
     padding-top: 22px;
     padding-bottom: 24px;
@@ -121,6 +129,9 @@
 .main-nav__item--active {
   @media (min-width: @tablet-width) {
     position: relative;
+    &:active::before {
+      background: none;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -137,6 +148,9 @@
   @media (min-width: @desktop-width) {
     &::before {
       background: @white-color;
+    }
+    &:active::before {
+      background: none;
     }
   }
 }

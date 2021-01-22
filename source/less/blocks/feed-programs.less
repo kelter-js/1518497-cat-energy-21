@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -151,6 +152,19 @@
     width: 18px;
     height: 2px;
     background-color: @black-color;
+  }
+  &:hover::before {
+    right: 0px;
+  }
+  &:hover::after {
+    width: 26px;
+    right: 8px;
+  }
+  &:focus::before,
+  &:focus::after,
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
   }
   .fstyle(16px, 16px, @black-color, uppercase);
   .link-style-reset();

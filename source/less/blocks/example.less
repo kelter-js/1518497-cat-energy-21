@@ -267,6 +267,13 @@
     padding: 0px;
     .fstyle(20px, 30px, @black-color, uppercase);
     border-bottom: 1px dotted @border-example-grey;
+    &:hover {
+      border-bottom: 1px solid @border-example-grey;
+    }
+    &:active,
+    &:focus {
+      border-bottom: none;
+    }
   }
 }
 
@@ -321,7 +328,15 @@
     background-color: @white-color;
     border: 2px solid @border-grey-color;
     border-radius: 50%;
-    box-shadow: 0px 1px 3px rgba(@white-color-rgba, 0.16);
+    box-shadow: 0px 1px 3px rgba(@black-color-rgba, 0.16);
+    &:hover {
+      box-shadow: 0px 2px 4px rgba(@black-color-rgba, 0.19);
+    }
+    &:active,
+    &:focus {
+      border: 2px solid @light-green-color;
+      box-shadow: 0px 3px 5px rgba(@black-color-rgba, 0.2);
+    }
     &::after {
       content: "";
       position: absolute;
