@@ -15,21 +15,26 @@
 }
 
 .copyright__link {
+  margin-right: 96px;
+  margin-bottom: 25px;
   .fstyle(16px, 18.4px, @special-dark-grey-color);
   font-family: "Arial", sans-serif;
   display: inline-block;
   vertical-align: middle;
-  margin-bottom: 29px;
-  margin-right: 14px;
 
   &:active,
   &:focus {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 29px;
+    margin-right: 14px;
+  }
 }
 
 .copyright__link-icon {
-  width: 164px;
+  width: 281px;
   height: 34px;
   color: @footer-icon-color;
   .link-style-reset();
@@ -41,5 +46,9 @@
   &:active,
   &:focus {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 164px;
   }
 }
