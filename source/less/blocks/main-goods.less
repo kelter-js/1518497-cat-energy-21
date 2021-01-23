@@ -248,6 +248,13 @@
   .link-style-reset();
   .fstyle(16px, 20px, @special-dark-grey-color, uppercase);
   background-color: @basic-grey-color;
+  &:hover {
+    background-color: @special-grey-color;
+  }
+  &:focus,
+  &:active {
+    color: rgba(@special-grey-color-rgb, 0.3)
+  }
   @media (min-width: @tablet-width) {
     display: inline-block;
     vertical-align: middle;
