@@ -2213,6 +2213,7 @@ body {
   .form__owner-contacts-list {
     width: 635px;
     margin-bottom: 0;
+    padding-left: 41px;
   }
 }
 @media (min-width: 1440px) {
@@ -2223,6 +2224,7 @@ body {
     column-gap: 78px;
     width: 1220px;
     margin-bottom: 0;
+    padding-left: 110px;
   }
 }
 .form__owner-contacts-item {
@@ -2353,6 +2355,7 @@ body {
     min-height: 112px;
     margin-bottom: 54px;
     padding-right: 166px;
+    padding-left: 40px;
   }
 }
 @media (min-width: 1440px) {
@@ -2364,6 +2367,7 @@ body {
     width: 1220px;
     min-height: 40px;
     margin-bottom: 61px;
+    padding-right: 110px;
     padding-left: 110px;
   }
 }
