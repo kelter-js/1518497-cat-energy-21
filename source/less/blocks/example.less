@@ -5,12 +5,12 @@
   @media (min-width: @tablet-width) {
     padding: 0px;
     padding-top: 43px;
-    background: linear-gradient(to bottom, @white-color 59.5%, @darker-grey-color 59.5%)
+    background: linear-gradient(to bottom, @white-color 57.3%, @darker-grey-color 57.3%)
   }
   @media (min-width: @desktop-width) {
     position: relative;
     padding: 0px;
-    background: linear-gradient(to right, #F2F2F2 70%, #EAEAEA 70%);
+    background: linear-gradient(to right, #F2F2F2 71.1%, #EAEAEA 71.1%);
     &::before {
       content: "";
       position: absolute;
@@ -64,10 +64,12 @@
 .example__wrapper {
   padding: 0px;
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 708px;
     margin: 0px auto;
   }
   @media (min-width: @desktop-width) {
+    position: static;
     grid-area: info;
     max-width: 610px;
     padding: 0px;
@@ -113,8 +115,11 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
   }
+  @media (min-width: @desktop-width) {
+    margin-right: 42px;
+  }
 }
-/*маргин 250px потому что я так понимаю, див с котами будет убран,а пикчи добавлены псевдоэлементами и абсолютно спозиционированы*/
+
 .example__amount-container {
   display: flex;
   justify-content: space-between;
@@ -124,12 +129,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     column-gap: 42px;
-    margin-bottom: 250px;
+    margin-bottom: 190px;
   }
   @media (min-width: @desktop-width) {
     flex-wrap: wrap;
     max-width: 436px;
     padding-top: 0px;
+    justify-content: flex-start;
   }
 }
 
@@ -179,17 +185,11 @@
 }
 
 .example__item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 17px;
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
-  }
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 0px;
-    right: 70px;
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 17px;
   }
 }
 
@@ -200,19 +200,22 @@
     display: inline-block;
     vertical-align: middle;
     text-align: right;
+    margin-top: 12px;
     margin-left: 125px;
     margin-bottom: 0px;
     .fstyle(20px, 20px, @black-color, uppercase);
   }
   @media (min-width: @desktop-width) {
-    padding-top: 0px;
+    margin-top: 0px;
     margin-left: 0px;
+    padding-top: 0px;
   }
 }
 
 .example__slider-controls-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @media (max-width: @mobile-width-only) {
     width: 228px;
     margin: 0px auto;
@@ -236,11 +239,20 @@
 }
 
 .example__slider-container {
-  min-width: 84px;
+  position: relative;
+  width: 82px;
+  height: 12px;
+  background-color: @white-color;
+  border: 1px solid @border-grey-color;
+  border-radius: 6px;
   @media (min-width: @tablet-width) {
-    min-width: 428px;
+    width: 428px;
+    height: 6px;
     margin-left: 14px;
     margin-right: 11px;
+    background-color: @border-grey-color-contrast;
+    border: none;
+    border-radius: 6px;
   }
 }
 
@@ -254,9 +266,105 @@
     margin: 0px;
     padding: 0px;
     .fstyle(20px, 30px, @black-color, uppercase);
+    border-bottom: 1px dotted @border-example-grey;
+    &:hover {
+      border-bottom: 1px solid @border-example-grey;
+    }
+    &:active,
+    &:focus {
+      border-bottom: none;
+    }
   }
 }
 
-.example__image-hidden {
+.example__image--before,
+.example__image--after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 263px;
+    left: 50%;
+    margin-left: -339px;
+    margin-bottom: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0px;
+    left: 75%;
+    margin-left: -345px;
+  }
+}
+
+.example__image--after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 50%;
+    margin-left: -273px;
+    margin-bottom: 0px;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0px;
+    left: 72%;
+  }
+}
+
+.example__image--hidden {
   display: none;
+}
+
+.example__slider-toggle {
+  position: absolute;
+  top: 3px;
+  width: 35px;
+  height: 6px;
+  background-color: @light-green-color;
+  border-radius: 6px;
+  @media (min-width: @tablet-width) {
+    top: -15px;
+    left: 50%;
+    width: 31px;
+    height: 31px;
+    margin-left: -17px;
+    background-color: @white-color;
+    border: 2px solid @border-grey-color;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(@black-color-rgba, 0.16);
+    &:hover {
+      box-shadow: 0px 2px 4px rgba(@black-color-rgba, 0.19);
+    }
+    &:active,
+    &:focus {
+      border: 2px solid @light-green-color;
+      box-shadow: 0px 3px 5px rgba(@black-color-rgba, 0.2);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      background-color: @light-green-color;
+      border-radius: 6px;
+    }
+  }
+}
+
+.example__slider-toggle--before {
+  @media (max-width: @mobile-width-only) {
+    left: 6px;
+  }
+}
+
+.example__slider-toggle--after {
+  @media (max-width: @mobile-width-only) {
+    right: 6px;
+  }
+}
+
+.example__final-price--text {
+  margin-right: 63px;
 }

@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи</title>
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="/fonts/oswaldregular.woff" as="font">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="/img/fav-icon.png" sizes="16x16" type="image/png">
     <link rel="manifest" href="/manifest.json">
@@ -75,17 +80,17 @@
               <ul class="form__program-selection-list container">
 
                 <li class="form__program-selection-item">
-                  <input class="form__radio-button" type="radio" value="weight-loss" name="program-type" id="feed-weight-lost" checked>
+                  <input class="form__radio-button visually-hidden" type="radio" value="weight-loss" name="program-type" id="feed-weight-lost" checked>
                   <label class="form__radio-label" for="feed-weight-lost">похудение</label>
                 </li>
 
                 <li class="form__program-selection-item">
-                  <input class="form__radio-button" type="radio" value="gather-mass" name="program-type" id="feed-gather-mass">
+                  <input class="form__radio-button visually-hidden" type="radio" value="gather-mass" name="program-type" id="feed-gather-mass">
                   <label class="form__radio-label" for="feed-gather-mass">набор массы</label>
                 </li>
 
                 <li class="form__program-selection-item">
-                  <input class="form__radio-button" type="radio" value="suggest-program" name="program-type" id="user-cant-decide">
+                  <input class="form__radio-button visually-hidden" type="radio" value="suggest-program" name="program-type" id="user-cant-decide">
                   <label class="form__radio-label" for="user-cant-decide">не знаю (нужен ваш совет)</label>
                 </li>
 
@@ -102,7 +107,7 @@
 
               <li class="form__owner-contacts-item">
                 <label class="form__label" for="user-email">e-mail:*</label>
-                <input class="form__input" type="email" id="user-email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="form__input form__input--owner" type="email" id="user-email" name="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="form__email-icon form__icon" width="20" height="14" fill="none" aria-hidden="true">
                   <use xlink:href="/img/icons/main-sprite.svg#email"/>
                 </svg>
@@ -110,7 +115,7 @@
 
               <li class="form__owner-contacts-item">
                 <label class="form__label" for="user-phone">телефон:*</label>
-                <input class="form__input" type="tel" id="user-phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                <input class="form__input form__input--owner" type="tel" id="user-phone" name="phone" placeholder="8 (960) 900-60-90" required>
                 <svg class="form__phone-icon form__icon" width="20" height="14" fill="none" aria-hidden="true">
                   <use xlink:href="/img/icons/main-sprite.svg#phone"/>
                 </svg>
@@ -173,8 +178,12 @@
         <div class="container">
           <div class="dealers__wrapper dealers__wrapper--form">
             <h2 class="dealers__heading">приглашаем к сотрудничеству дилеров!</h2>
-            <p class="dealers__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="dealers__address"><span class="dealers__house">ул. Большая Конюшенная, д. 19/8</span> <span class="dealers__city">Санкт-Петербург</span></p>
           </div>
+        </div>
+
+        <div class="dealers__map-container invisible">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003128!2d30.32085871610071!3d59.93871916905414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1611154599473!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-label="Адрес компании Кэт энерджи в г. Санкт-Петербург, по ул. Большая Конюшенная, д.19/8" tabindex="0"></iframe>
         </div>
 
         <div class="dealers__map-wrapper">
@@ -236,8 +245,8 @@
         </div>
 
         <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link-icon" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copyright__link">HTML Academy</span>
             <svg role="img" aria-label="Перейти на сайт HTML Academy" width="27" height="34" fill="none">
               <use xlink:href="/img/icons/main-sprite.svg#htmlLogo"/>
             </svg>
