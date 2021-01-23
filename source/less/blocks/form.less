@@ -1,5 +1,6 @@
 .form__pet-info {
   border: none;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,17 +13,19 @@
   width: 280px;
   .list-style-disabler();
   margin-bottom: 24px;
+
   @media (min-width: @tablet-width) {
     width: 630px;
     margin-bottom: 72px;
     margin-left: 41px;
     border-bottom: none;
   }
+
   @media (min-width: @desktop-width) {
     width: 569px;
     min-height: 196px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
@@ -32,21 +35,27 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 14px;
+
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
+
   @media (min-width: @desktop-width) {
     min-height: 52px;
     margin-bottom: 20px;
+
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
+
     &:last-child .form__input {
       margin-top: auto;
     }
+
     &:first-child .form__input {
       margin-bottom: auto;
     }
@@ -57,6 +66,7 @@
 .form__label {
   margin-right: 14px;
   .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
+
   @media (min-width: @tablet-width) {
     .fstyle(20px, 30px, @special-dark-grey-color, uppercase);
   }
@@ -68,42 +78,50 @@
   padding-bottom: 12px;
   padding-left: 15px;
   border: 1px solid @form-border-grey-color;
+
   &::placeholder {
     .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
     font-family: "Oswald", "Arial", sans-serif;
   }
+
   &:hover {
     border: 1px solid @border-grey-color;
   }
+
   &:focus,
   &:active {
     padding-bottom: 11px;
     padding-top: 12px;
     border: 2px solid @special-dark-grey-color;
   }
+
   &:focus:invalid {
     padding-bottom: 11px;
     padding-top: 12px;
     border: 2px solid @error-red-color;
     outline: none;
   }
+
   @media (min-width: @tablet-width) {
     min-height: 21px;
     padding-top: 15px;
     padding-left: 18.6px;
     padding-bottom: 14px;
+
     &:focus,
     &:active {
       padding-top: 14px;
       padding-bottom: 13px;
       border: 2px solid @special-dark-grey-color;
     }
+
     &:focus:invalid {
       padding-bottom: 14px;
       padding-top: 13px;
       border: 2px solid @error-red-color;
       outline: none;
     }
+
     &::placeholder {
       .fstyle(20px, 30px, @special-dark-grey-color, uppercase);
     }
@@ -112,6 +130,7 @@
 
 .form__input--owner {
   border: 1px solid @border-grey-color;
+
   &:disabled {
     padding-top: 14px;
     padding-bottom: 13px;
@@ -129,9 +148,10 @@
   min-height: 115px;
   margin-bottom: 19px;
   padding-top: 28px;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
-    padding: 0px;
+    margin-bottom: 0;
+    padding: 0;
     border: none;
   }
 }
@@ -139,6 +159,7 @@
 .form__program-selection-list {
   .list-style-disabler();
   margin: auto;
+
   @media (min-width: @tablet-width) {
     width: 600px;
     min-height: 144px;
@@ -148,11 +169,12 @@
     padding-left: 28px;
     border: 1px solid @form-border-grey-color;
   }
+
   @media (min-width: @desktop-width) {
     width: 541px;
     min-height: 144px;
-    margin-bottom: 0px;
-    padding: 24px 0px;
+    margin-bottom: 0;
+    padding: 24px 0;
     padding-left: 28px;
     border: 1px solid @form-border-grey-color;
   }
@@ -162,15 +184,19 @@
   position: relative;
   .fstyle(16px, 18px, @special-dark-grey-2-color, uppercase);
   margin-left: 45px;
+
   .form__radio-button:disabled + & {
     color: rgba(@special-dark-grey-2-color-rgb, 0.3);
   }
+
   &:hover::after {
     border: 1px solid @radio-button-border;
   }
+
   .form__radio-button:disabled + &::after {
     border: 1px solid @radio-button-border;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -180,6 +206,7 @@
     height: 29px;
     border: 1px solid @border-grey-color;
     border-radius: 50%;
+
     @media (min-width: @tablet-width) {
       top: -5px;
       left: -60px;
@@ -187,10 +214,12 @@
       height: 40px;
     }
   }
+
   .form__radio-button:disabled + &::after,
   .form__radio-button:disabled + &::before {
     opacity: 0.3;
   }
+
   .form__radio-button:checked + &::before {
     content: "";
     position: absolute;
@@ -200,6 +229,7 @@
     height: 13.5px;
     background-color: @light-green-color;
     border-radius: 50%;
+
     @media (min-width: @tablet-width) {
       top: 7px;
       left: -47.8px;
@@ -207,6 +237,7 @@
       height: 18px;
     }
   }
+
   @media (min-width: @tablet-width) {
     margin-left: 60px;
     .fstyle(20px, 30px, @special-dark-grey-2-color, uppercase);
@@ -215,12 +246,15 @@
 
 .form__program-selection-item {
   margin-bottom: 25px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 23px;
+
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
+
   @media (min-width: @desktop-width) {
     min-height: 40px;
   }
@@ -228,10 +262,11 @@
 
 .form__owner-contacts {
   position: relative;
-  margin: 0px;
+  margin: 0;
   margin-top: 26px;
-  padding: 0px;
+  padding: 0;
   border: none;
+
   &::after {
     content: "";
     position: absolute;
@@ -241,15 +276,18 @@
     background: @light-green-color;
     z-index: -1;
   }
+
   @media (min-width: @tablet-width) {
-    margin: 0px auto;
+    margin: 0 auto;
     margin-bottom: 65px;
+
     &::after {
       top: 20px;
     }
   }
+
   @media (min-width: @desktop-width) {
-    margin: 0px auto;
+    margin: 0 auto;
     margin-bottom: 69px;
   }
 }
@@ -257,8 +295,9 @@
 .form__comment {
   position: relative;
   border: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+
   &::after {
     content: "";
     position: absolute;
@@ -268,6 +307,7 @@
     background: @light-green-color;
     z-index: -1;
   }
+
   @media (min-width: @tablet-width) {
     &::after {
       top: 20px;
@@ -280,6 +320,7 @@
   .fstyle(24px, 26px, @special-dark-grey-2-color);
   font-weight: normal;
   background-color: transparent;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
     .fstyle(36px, 36px, @black-color);
@@ -294,13 +335,15 @@
   padding-left: 19px;
   padding-right: 15px;
   background-color: white;
+
   @media (min-width: @tablet-width) {
     width: 521px;
     min-height: 36px;
-    margin-left: 0px;
+    margin-left: 0;
     padding-left: 39px;
     padding-right: 42px;
   }
+
   @media (min-width: @desktop-width) {
     margin-left: -40px;
     padding-left: 40px;
@@ -312,6 +355,7 @@
   width: 121px;
   min-height: 26px;
   padding-right: 22px;
+
   @media (min-width: @tablet-width) {
     width: 182px;
     padding-left: 39px;
@@ -321,9 +365,11 @@
 
 .form__comment .form__heading {
   margin-bottom: 38px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
   }
+
   @media (min-width: @tablet-width) {
     min-height: 36px;
   }
@@ -332,17 +378,19 @@
 .form__owner-contacts-list {
   list-style: none;
   margin-bottom: 23.5px;
+
   @media (min-width: @tablet-width) {
     width: 635px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 569px 572px;
     grid-template-rows: 50px;
     column-gap: 78px;
     width: 1220px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -353,21 +401,24 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 14px;
+
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
 .form__user-commentary {
   width: 251px;
   height: 137px;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-bottom: 22.7px;
   padding-left: 15px;
   padding-right: 12px;
@@ -375,38 +426,43 @@
   border: 1px solid @form-border-grey-color;
   resize: none;
   overflow: hidden;
+
   &::placeholder {
     width: 631px;
     .fstyle(16px, 18px, @special-dark-grey-color, uppercase);
     font-family: "Oswald", "Arial", sans-serif;
   }
+
   @media (min-width: @tablet-width) {
     min-height: 162px;
     width: 591px;
     margin-left: 40px;
     margin-bottom: 65px;
-    margin-top: 0px;
+    margin-top: 0;
     padding-left: 19px;
     padding-top: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-right: 19px;
+
     &::placeholder {
       .fstyle(20px, 30px, @special-dark-grey-color, uppercase);
     }
   }
+
   @media (min-width: @desktop-width) {
     width: 1180px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
 .form__additional {
   position: relative;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   border: none;
+
   &::after {
     content: "";
     position: absolute;
@@ -416,6 +472,7 @@
     background: @light-green-color;
     z-index: -1;
   }
+
   @media (min-width: @tablet-width) {
     &::after {
       top: 20px;
@@ -427,11 +484,13 @@
   width: 141px;
   min-height: 26px;
   padding-right: 24px;
+
   @media (min-width: @tablet-width) {
     width: 211px;
     padding-right: 41px;
     padding-left: 40px;
   }
+
   @media (min-width: @tablet-width) {
     width: 212px;
   }
@@ -439,14 +498,17 @@
 
 .form__additional .form__heading {
   margin-bottom: 34px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+    min-height: 36px;
   }
 }
 
 .form__additional-list {
   list-style: none;
   margin-bottom: 34px;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 221px 221px;
@@ -457,6 +519,7 @@
     margin-bottom: 54px;
     padding-right: 166px;
   }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -470,14 +533,16 @@
 }
 
 .form__additional-item {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 25px;
-  padding: 0px;
+  padding: 0;
+
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -502,6 +567,7 @@
     width: 29px;
     height: 29px;
     border: 1px solid @border-grey-color;
+
     @media (min-width: @tablet-width) {
       top: -5px;
       left: -59px;
@@ -523,11 +589,13 @@
     width: 18px;
     height: 14px;
     background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+
     @media (min-width: @tablet-width) {
       top: 8px;
       left: -47px;
     }
   }
+
   @media (min-width: @tablet-width) {
     margin-left: 59px;
     .fstyle(20px, 30px, @special-dark-grey-color, uppercase);
@@ -542,17 +610,19 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: normal;
   border: none;
+
   @media (min-width: @tablet-width) {
     width: 282px;
     padding: 11px 45px;
     margin-left: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     .fstyle(20px, 30px, @white-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
     width: 568px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
@@ -565,14 +635,9 @@
     min-height: 52px;
     margin-bottom: 86px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 82px;
-  }
-}
-
-.form__additional .form__heading {
-  @media (min-width: @tablet-width) {
-    min-height: 36px;
   }
 }
 
@@ -600,12 +665,14 @@
   right: 15px;
   width: 20px;
   height: 14px;
+
   @media (min-width: @tablet-width) {
     top: 19px;
     right: 19px;
     width: 18px;
     height: 13px;
   }
+
   @media (min-width: @desktop-width) {
     right: 20px;
   }
@@ -617,10 +684,12 @@
   right: 13px;
   width: 20px;
   height: 20px;
+
   @media (min-width: @tablet-width) {
     top: 16px;
     right: 17px;
   }
+
   @media (min-width: @desktop-width) {
     top: 15px;
   }

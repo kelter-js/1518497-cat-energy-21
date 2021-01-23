@@ -1,22 +1,27 @@
 .logo {
   width: 190px;
   height: 38px;
+
   &:hover {
     opacity: 0.8;
   }
+
   &:active,
   &:focus {
     opacity: 0.6;
   }
+
   @media (max-width: @mobile-width-only) {
     padding-left: 20px;
   }
+
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
     margin-top: 25px;
     margin-right: 95px;
   }
+
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 60px;
@@ -32,6 +37,7 @@
 
 .logo__desktop {
   display: none;
+
   @media (min-width: @desktop-width) {
     display: block;
   }
@@ -39,6 +45,7 @@
 
 .logo__tablet {
   display: none;
+
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     display: block;
   }

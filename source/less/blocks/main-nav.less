@@ -1,11 +1,10 @@
 @media (max-width: @mobile-width-only) {
-
   .main-nav--closed .main-nav__list {
     display: none;
   }
 
   .main-nav--closed .main-nav__toggle::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 23px;
     left: 20px;
@@ -26,10 +25,12 @@
       height: 1.5px;
       background-color: @black-color;
     }
+
     &::before {
       transform: rotate(45deg);
       box-shadow: none;
     }
+
     &::after {
       transform: rotate(-45deg);
     }
@@ -42,20 +43,20 @@
   .main-nav--withoutjs .main-nav__list {
     display: block;
   }
-
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   display: block;
   width: 64px;
   height: 66px;
-  padding: 0px;
+  padding: 0;
   cursor: pointer;
   border: none;
   background: none;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -63,12 +64,14 @@
 
 .main-nav__list {
   .list-style-disabler();
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     width: 492px;
     margin-top: 42px;
   }
+
   @media (min-width: @desktop-width) {
     width: 501px;
     margin-top: 16px;
@@ -85,23 +88,28 @@
   &:hover {
     opacity: 0.6;
   }
+
   &:active,
   &:focus {
     opacity: 0.3;
   }
+
   @media (max-width: @mobile-width-only) {
     padding-top: 22px;
     padding-bottom: 24px;
     text-align: center;
     border-bottom: 1px solid @grey-border-header;
+
     &:first-child {
       border-top: 1px solid @grey-border-header;
     }
   }
+
   @media (min-width: @tablet-width) {
     margin-right: 33px;
+
     &:last-child {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 }
@@ -111,10 +119,12 @@
   .link-style-reset();
   .fstyle(20px, 20px, @black-color, uppercase);
   font-weight: 500;
+
   @media (min-width: @tablet-width) {
     min-height: 36px;
     .fstyle(18px, 24px, @black-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
     .fstyle(20px, 30px, @black-color, uppercase);
   }
@@ -129,9 +139,11 @@
 .main-nav__item--active {
   @media (min-width: @tablet-width) {
     position: relative;
+
     &:active::before {
       background: none;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -149,6 +161,7 @@
     &::before {
       background: @white-color;
     }
+
     &:active::before {
       background: none;
     }

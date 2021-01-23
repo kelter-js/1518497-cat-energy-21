@@ -2,9 +2,11 @@
   margin-bottom: 36px;
   font-weight: normal;
   background-color: transparent;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 80px;
   }
+
   @media (min-width: @desktop-width) {
     grid-area: heading;
     margin-bottom: 81px;
@@ -19,13 +21,15 @@
   padding-left: 19px;
   background-color: @white-color;
   .fstyle(24px, 24px, @black-color);
+
   @media (min-width: @tablet-width) {
     width: 338px;
-    margin-left: -0px;
+    margin-left: 0;
     padding-left: 37px;
     padding-right: 36px;
     .fstyle(36px, 36px, @black-color);
   }
+
   @media (min-width: @desktop-width) {
     margin-left: -40px;
     padding-left: 40px;
@@ -35,17 +39,19 @@
 
 .additional-goods__list {
   list-style: none;
-  padding: 0px;
+  padding: 0;
   margin-bottom: 39px;
+
   @media (min-width: @tablet-width) {
-    margin: 0px;
+    margin: 0;
     margin-bottom: 69px;
     border: 1px solid @border-grey-color;
     box-sizing: border-box;
   }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
     border-right: none;
     border-left: none;
   }
@@ -55,21 +61,26 @@
   padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid @border-grey-color;
+
   &:first-child {
     border-top: 1px solid @border-grey-color;
   }
+
   @media (min-width: @tablet-width) {
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 38px;
     padding-right: 38px;
+
     &:first-child {
       border-top: none;
     }
+
     &:last-child {
       border-bottom: none;
     }
   }
+
   @media (min-width: @desktop-width) {
     height: 40px;
     padding-top: 15px;
@@ -86,9 +97,10 @@
     row-gap: 23.7px;
     grid-template-rows: 23.3px 38px;
     grid-template-areas:
-    'name info'
-    'buy buy';
+      "name info"
+      "buy buy";
   }
+
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
@@ -98,19 +110,21 @@
 }
 
 .additional-goods__goods-name {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 13px;
-  padding: 0px;
+  padding: 0;
   .fstyle(16px, 16px, @special-dark-grey-2-color, uppercase);
   font-weight: normal;
+
   @media (min-width: @tablet-width) {
     grid-area: name;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     .fstyle(20px, 20px, @special-dark-grey-2-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
     width: 323px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -120,15 +134,17 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 15px;
+
   @media (min-width: @tablet-width) {
     grid-area: info;
     justify-content: flex-end;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   @media (min-width: @desktop-width) {
     width: 286px;
     justify-content: space-between;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-right: 40px;
   }
 }
@@ -137,13 +153,15 @@
   position: relative;
   padding-top: 25px;
   padding-bottom: 35px;
+
   &__info,
   &__price {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     .fstyle(14px, 14px, @special-dark-grey-color);
     font-family: "Arial", sans-serif;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -153,15 +171,18 @@
     background: @light-green-color;
     z-index: -1;
   }
+
   @media (min-width: @tablet-width) {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 76px;
+
     &::after {
       top: 22px;
     }
   }
+
   @media (min-width: @desktop-width) {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 86px;
   }
 }
@@ -171,8 +192,7 @@
     display: grid;
     grid-template-columns: 896px 245px;
     grid-template-rows: 289px;
-    grid-template-areas:
-    'table gift';
+    grid-template-areas: "table gift";
     column-gap: 80px;
   }
 }
@@ -181,21 +201,23 @@
   display: inline-block;
   vertical-align: middle;
   width: 171px;
-  padding: 10px 0px;
+  padding: 10px 0;
   padding-left: 109px;
   .link-style-reset();
   .fstyle(16px, 20px, @white-color, uppercase);
   font-weight: normal;
+
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     grid-area: buy;
     width: 62px;
     padding-left: 285px;
     padding-right: 285px;
   }
+
   @media (min-width: @desktop-width) {
     width: 244px;
     height: 20px;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-align: center;
   }
 }
@@ -207,24 +229,28 @@
   text-align: center;
   background-image: url("/img/mobile-gift-cat-photo.png");
   background-repeat: no-repeat;
+
   @media (min-resolution: 2dppx) {
     background-image: url("/img/mobile-gift-cat-photo@2x.png");
     background-size: 280px auto;
   }
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
     min-height: 200px;
-    padding-top: 0px;
+    padding-top: 0;
     text-align: right;
     background-image: url("/img/tablet-gift-cat-photo.png");
+
     @media (min-resolution: 2dppx) {
       background-image: url("/img/tablet-gift-cat-photo@2x.png");
       background-size: 708px auto;
     }
   }
+
   @media (min-width: @desktop-width) {
     grid-area: gift;
     width: 245px;
@@ -232,6 +258,7 @@
     padding-bottom: 42px;
     box-sizing: border-box;
     background-image: url("/img/desktop-gift-cat-photo.png");
+
     @media (min-resolution: 2dppx) {
       background-image: url("/img/desktop-gift-cat-photo@2x.png");
       background-size: 245px auto;
@@ -245,12 +272,14 @@
   left: 101px;
   width: 78px;
   height: 80px;
+
   @media (min-width: @tablet-width) {
     top: 57px;
     left: 78px;
     width: 80px;
     height: 82px;
   }
+
   @media (min-width: @desktop-width) {
     top: 56px;
     left: 84px;
@@ -261,19 +290,21 @@
   display: inline-block;
   vertical-align: middle;
   width: 161px;
-  margin: 0px auto;
+  margin: 0 auto;
   .fstyle(16px, 20px, @white-color);
   font-weight: normal;
   font-family: "Arial", sans-serif;
   text-align: center;
+
   @media (min-width: @tablet-width) {
-    margin: 0px 0px;
+    margin: 0 0;
     margin-right: 124px;
     text-align: left;
   }
+
   @media (min-width: @desktop-width) {
     width: 161px;
-    margin: 0px auto;
+    margin: 0 auto;
     text-align: center;
   }
 }
@@ -283,8 +314,9 @@
     margin-right: 57px;
     .fstyle(16px, 20px, @special-dark-grey-color);
   }
+
   @media (min-width: @desktop-width) {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 

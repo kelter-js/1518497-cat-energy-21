@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 27px;
   padding-bottom: 32px;
+
   @media (max-width: @mobile-width-only) {
     &::before,
     &::after {
@@ -12,64 +13,73 @@
       height: 1px;
       background-color: @footer-grey-color;
     }
+
     &::after {
       top: 524px;
     }
   }
+
   @media (min-width: @tablet-width) {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
+
   @media (min-width: @desktop-width) {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
     margin-bottom: 61px;
   }
 }
 
 .program-selection__heading {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 37px;
   .fstyle(36px, 36px, @black-color);
   font-weight: normal;
+
   @media (min-width: @tablet-width) {
     margin-left: 39px;
     margin-bottom: 54px;
     .fstyle(60px, 60px, @black-color);
   }
+
   @media (min-width: @desktop-width) {
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 56px;
   }
 }
 
 .program-selection__text {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   .fstyle(14px, 18px, @black-color, uppercase);
+
   @media (min-width: @tablet-width) {
     width: 323px;
     margin-left: 39px;
     .fstyle(20px, 30px, @black-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
 .program-selection__footnote {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-left: 61px;
   .fstyle(14px, 16px, @black-color);
   font-family: "Arial", sans-serif;
   font-weight: normal;
+
   @media (min-width: @tablet-width) {
     margin-left: 61px;
     .fstyle(16px, 16px, @black-color);
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 81px;
   }
@@ -77,6 +87,7 @@
 
 .program-selection__info-wrapper {
   margin-bottom: 39px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 66px;
   }

@@ -3,37 +3,42 @@
   min-height: 275px;
   padding-top: 27px;
   text-align: center;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      display: block;
-      width: 320px;
-      height: 302px;
-      background: url("/img/background-cat-mobile.png") no-repeat;
-      z-index: -1;
 
-      @media (min-resolution: 2dppx) {
-        background: url("/img/background-cat-mobile@2x.png");
-        background-size: 320px auto;
-      }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 320px;
+    height: 302px;
+    background: url("/img/background-cat-mobile.png") no-repeat;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background: url("/img/background-cat-mobile@2x.png");
+      background-size: 320px auto;
     }
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 181px;
     margin-bottom: 20px;
-    padding-top: 0px;
+    padding-top: 0;
     background-color: @white-color;
     text-align: left;
+
     &::before {
       display: none;
     }
   }
+
   @media (min-width: @desktop-width) {
     min-height: 181px;
     margin-bottom: 52px;
     background-color: @white-color;
     text-align: left;
+
     &::before {
       display: none;
     }
@@ -45,10 +50,12 @@
   top: 167px;
   left: 50%;
   margin-left: -140px;
+
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     top: 201px;
     margin-left: -355px;
   }
+
   @media (min-width: @desktop-width) {
     top: -82px;
     left: 58%;
@@ -61,11 +68,12 @@
   position: relative;
   margin-bottom: 22px;
   background: linear-gradient(to bottom, rgba(@light-green-color, 85%) 63.5%, @white-color 63.5%);
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
-    margin: 0px auto;
+    margin: 0 auto;
     background: none;
   }
+
   @media (min-width: @desktop-width) {
     min-height: 499px;
     margin-bottom: 136px;
@@ -74,17 +82,19 @@
 }
 
 .promo__slogan {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 25px;
   .fstyle(36px, 36px, @white-color);
   font-weight: 400;
+
   @media (min-width: @tablet-width) {
     width: 414px;
     margin-left: 87px;
     margin-bottom: 41px;
     .fstyle(60px, 60px, @black-color);
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 80px;
     margin-bottom: 40px;
@@ -92,13 +102,15 @@
 }
 
 .promo__intro {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   .fstyle(14px, 14px, @white-color, uppercase);
+
   @media (min-width: @tablet-width) {
     margin-left: 88px;
     .fstyle(20px, 20px, @black-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 80px;
   }
@@ -110,12 +122,14 @@
   .link-style-reset();
   .fstyle(14px, 18px, @white-color, uppercase);
   font-weight: 400;
+
   @media (min-width: @tablet-width) {
     position: relative;
     margin-left: 82px;
     padding: 17px 26px;
     .fstyle(20px, 20px, @white-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 80px;
   }
@@ -126,11 +140,13 @@
   justify-content: center;
   padding-top: 138px;
   background-color: @white-color;
+
   @media (min-width: @tablet-width) {
     display: block;
     min-height: 580px;
     padding-top: 29px;
   }
+
   @media (min-width: @desktop-width) {
     min-height: 55px;
   }

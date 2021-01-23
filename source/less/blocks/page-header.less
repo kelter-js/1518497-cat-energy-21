@@ -5,19 +5,22 @@
   flex-direction: column;
   padding-top: 12px;
   min-height: 37px;
+
   @media (max-width: @mobile-width-only) {
     width: 320px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
     margin-bottom: 62px;
   }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -30,10 +33,12 @@
 
 .page-header--form {
   padding-top: 12px;
+
   @media (min-width: @tablet-width) {
-    padding-top: 0px;
+    padding-top: 0;
     margin-bottom: 64px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 73.5px;
     padding-top: 1px;
@@ -42,10 +47,12 @@
 
 .page-header--catalog {
   padding-top: 12px;
+
   @media (min-width: @tablet-width) {
-    padding-top: 0px;
+    padding-top: 0;
     margin-bottom: 64px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 74px;
     padding-top: 1px;
@@ -54,6 +61,6 @@
 
 .page-header__logo {
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 11px;;
+    margin-bottom: 11px;
   }
 }

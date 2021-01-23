@@ -1,14 +1,18 @@
 .feed-programs {
   margin-bottom: 27px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 67px;
   }
 }
+
 .feed-programs__list {
   .list-style-disabler();
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -19,6 +23,7 @@
 
 .feed-programs__item {
   margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     width: 594px;
     min-height: 238px;
@@ -28,10 +33,12 @@
     padding-left: 52px;
     padding-right: 62px;
     background-color: @basic-grey-color;
+
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
+
   @media (min-width: @desktop-width) {
     width: 467px;
     min-height: 278px;
@@ -39,7 +46,7 @@
     padding-left: 52px;
     padding-right: 51px;
     padding-bottom: 55px;
-    margin: 0px;
+    margin: 0;
   }
 }
 
@@ -51,8 +58,9 @@
     padding-left: 52px;
     padding-right: 28px;
     padding-bottom: 53px;
-    margin: 0px;
+    margin: 0;
   }
+
   @media (min-width: @desktop-width) {
     width: 476px;
     min-height: 272px;
@@ -60,13 +68,15 @@
     padding-left: 33px;
     padding-right: 61px;
     padding-bottom: 55px;
-    margin: 0px;
+    margin: 0;
   }
 }
 
 .feed-programs__wrapper {
   padding: 20px 20px;
   position: relative;
+  background-color: @basic-grey-color;
+
   @media (max-width: @mobile-width-only) {
     &::before {
       content: "";
@@ -78,31 +88,35 @@
       background-color: @footer-grey-color;
     }
   }
-  background-color: @basic-grey-color;
+
   @media (min-width: @tablet-width) {
     position: static;
-    padding: 0px;
+    padding: 0;
   }
+
   @media (min-width: @desktop-width) {
-    padding: 0px;
+    padding: 0;
   }
 }
 
 .feed-programs__heading {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 27px;
   margin-left: 69px;
   .fstyle(24px, 37px, @black-color, uppercase);
   font-weight: 500;
+
   @media (max-width: @mobile-width-only) {
     margin-top: 10px;
   }
+
   @media (min-width: @tablet-width) {
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 24px;
     .fstyle(36px, 36px, @black-color, uppercase);
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 168px;
     margin-bottom: 73px;
@@ -110,16 +124,18 @@
 }
 
 .feed-programs__text {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 38px;
   font-family: "Arial", sans-serif;
   .fstyle(14px, 18px, @special-dark-grey-color);
+
   @media (min-width: @tablet-width) {
     width: 377px;
     margin-bottom: 48px;
     .fstyle(16px, 24px, @black-color);
   }
+
   @media (min-width: @desktop-width) {
     width: 467px;
     margin-bottom: 23px;
@@ -132,7 +148,9 @@
   display: inline-block;
   vertical-align: middle;
   width: 132px;
-  .fstyle(20px, 30px, @black-color, uppercase);
+  .fstyle(16px, 16px, @black-color, uppercase);
+  .link-style-reset();
+
   &::before {
     content: "";
     position: absolute;
@@ -144,6 +162,7 @@
     border-bottom: 6px solid transparent;
     border-left: 8px solid @black-color;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -153,33 +172,38 @@
     height: 2px;
     background-color: @black-color;
   }
+
   &:hover::before {
-    right: 0px;
+    right: 0;
   }
+
   &:hover::after {
     width: 26px;
     right: 8px;
   }
+
   &:focus::before,
   &:focus::after,
   &:active::before,
   &:active::after {
     opacity: 0.3;
   }
-  .fstyle(16px, 16px, @black-color, uppercase);
-  .link-style-reset();
+
   @media (min-width: @tablet-width) {
     width: 165px;
     .fstyle(20px, 30px, @black-color, uppercase);
+
     &::before {
       top: 9px;
       right: 8px;
     }
+
     &::after {
       top: 14px;
       right: 16px;
     }
   }
+
   @media (min-width: @desktop-width) {
     margin-left: 19px;
   }
@@ -188,6 +212,7 @@
 .feed-programs__item--weight-loss,
 .feed-programs__item--gather-mass {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -217,12 +242,14 @@
   left: 22px;
   width: 50px;
   height: 53px;
+
   @media (min-width: @tablet-width) {
     top: 81px;
     left: 446px;
     width: 200px;
     height: 211px;
   }
+
   @media (min-width: @desktop-width) {
     top: 41px;
     left: 52px;
@@ -236,12 +263,14 @@
   left: 13px;
   width: 67px;
   height: 50px;
+
   @media (min-width: @tablet-width) {
     top: 91px;
     left: 412px;
     width: 268px;
     height: 200px;
   }
+
   @media (min-width: @desktop-width) {
     top: 47px;
     left: 33px;
