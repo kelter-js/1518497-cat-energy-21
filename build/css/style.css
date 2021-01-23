@@ -1916,13 +1916,13 @@ body {
 }
 .form__input:focus,
 .form__input:active {
-  padding-bottom: 11px;
-  padding-top: 12px;
+  height: 16px;
+  padding-left: 14px;
   border: 2px solid #444444;
 }
 .form__input:focus:invalid {
-  padding-bottom: 11px;
-  padding-top: 12px;
+  height: 16px;
+  padding-left: 14px;
   border: 2px solid #FF8282;
   outline: none;
 }
@@ -1935,13 +1935,13 @@ body {
   }
   .form__input:focus,
   .form__input:active {
-    padding-top: 14px;
-    padding-bottom: 13px;
+    min-height: 19px;
+    padding-left: 17.6px;
     border: 2px solid #444444;
   }
   .form__input:focus:invalid {
-    padding-bottom: 14px;
-    padding-top: 13px;
+    min-height: 19px;
+    padding-left: 17.6px;
     border: 2px solid #FF8282;
     outline: none;
   }
